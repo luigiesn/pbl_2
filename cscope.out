@@ -1,0 +1,7451 @@
+cscope 15 $HOME\Desktop\PBL\Projeto - PBL - Grupo 2\branch\branch_minimo"               0000040365
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\App.h
+
+1 #i‚de‡
+APP_H
+
+
+2 
+	#APP_H
+
+
+	)
+
+4 
+Aµ_Inô
+();
+
+6 
+Aµ
+();
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\DAC.h
+
+1 #i‚de‡
+DAC_H
+
+
+2 
+	#DAC_H
+
+
+	)
+
+4 
+	~<LPC11xx.h
+>
+
+6 
+	#DAC_VREF
+ 3.3
+
+	)
+
+8 
+DAC_Inô
+();
+
+10 
+DAC_SëVﬁège
+(
+v
+);
+
+12 
+DAC_Tønsmôú
+ ( 
+uöt16_t
+ 
+v_uAmo°ø
+ );
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Eeprom.h
+
+1 #i‚de‡
+EEPROM_H
+
+
+2 
+	#EEPROM_H
+
+
+	)
+
+4 
+Eïrom_Inô
+();
+
+6 
+Eïrom_Wrôe
+(
+addr
+, 
+d©a
+);
+
+8 
+Eïrom_Ród
+(
+addr
+);
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\FuncGen.h
+
+1 #i‚de‡
+FUNC_GEN
+
+
+2 
+	#FUNC_GEN
+
+
+	)
+
+4 
+	~<LPC11xx.h
+>
+
+6 
+	~"DAC.h
+"
+
+9 
+	m·Söe
+
+
+10 }
+	tfuncTy≥
+;
+
+12 
+FuncGí_Inô
+();
+
+14 
+FuncGí_Pro˚ss
+();
+
+16 
+FuncGí_Sèπ
+(
+funcTy≥
+ 
+f
+);
+
+18 
+TIM0_IRQH™dÀr
+();
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\HAL_ADC.h
+
+1 #i‚de‡
+HAL_ADC_H
+
+
+2 
+	#HAL_ADC_H
+
+
+	)
+
+4 
+	~"defs.h
+"
+
+6 
+HAL_ADC_Inô
+();
+
+8 
+HAL_ADC_SëCh™√l
+(
+ch
+);
+
+10 
+HAL_ADC_GëSam∂e
+();
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\HAL_i2c.h
+
+1 #i‚de‡
+HAL_I2C
+
+
+2 
+	#HAL_I2C
+
+
+	)
+
+4 
+	~<LPC11xx.h
+>
+
+7 
+	midvEEPROM
+ = 0x´, 
+	midvDAC
+ = 0xc6, 
+	midvRTC
+ = 0xd0
+
+8 }
+	gi2cDevi˚
+;
+
+10 
+HAL_i2c_Inô
+();
+
+12 
+HAL_i2c_Síd
+(
+addr
+, *
+buf„r
+, 
+buf„rSize
+, 
+°›
+);
+
+14 
+HAL_i2c_Re˚ive
+(
+addr
+);
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Keyboard.h
+
+1 #i‚de‡
+KEYBOARD_H
+
+
+2 
+	#KEYBOARD_H
+
+
+	)
+
+4 
+	#KBD_AD_CH
+ 7
+
+	)
+
+7 
+	mkbdNULL
+, 
+	mkbdKEY1
+, 
+	mkbdKEY2
+, 
+	mkbdKEY3
+, 
+	mkbdKEY4
+, 
+	mkbdKEY5
+,
+
+8 }
+	tkeybﬂrdKey
+;
+
+10 
+KBD_Inô
+();
+
+12 
+keybﬂrdKey
+ 
+KBD_GëKey
+();
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\LCD.h
+
+1 #i‚de‡
+LCD_H
+
+
+2 
+	#LCD_H
+
+
+	)
+
+4 
+	~"P‹t_HAL.h
+"
+
+7 
+	mlcdCLEAR
+ = 0x01,
+
+8 
+	mlcdCURSOR_HOME
+ = 0x02,
+
+9 
+	mlcdCURSOR_OFF
+ = 0x0c,
+
+10 
+	mlcdCURSOR_ON
+ = 0x0f,
+
+11 
+	mlcdSETTOXX
+ = 0x80,
+
+12 }
+	tlcdCmd
+;
+
+14 
+LCD_Inô
+();
+
+16 
+LCD_WrôeComm™d
+(
+lcdCmd
+ 
+cmd
+);
+
+18 
+LCD_WrôeD©a
+(
+d©a
+);
+
+20 
+LCD_WrôeSåög
+(*
+°r
+);
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\LPC11xx.h
+
+21 #i‚de‡
+__LPC11xx_H__
+
+
+22 
+	#__LPC11xx_H__
+
+
+	)
+
+24 #ifde‡
+__˝lu•lus
+
+
+51 
+	eIRQn
+
+
+54 
+Re£t_IRQn
+ = -15,
+
+55 
+N⁄MaskabÀI¡_IRQn
+ = -14,
+
+56 
+H¨dFau…_IRQn
+ = -13,
+
+57 
+SVCÆl_IRQn
+ = -5,
+
+58 
+PídSV_IRQn
+ = -2,
+
+59 
+SysTick_IRQn
+ = -1,
+
+62 
+WAKEUP0_IRQn
+ = 0,
+
+63 
+WAKEUP1_IRQn
+ = 1,
+
+64 
+WAKEUP2_IRQn
+ = 2,
+
+65 
+WAKEUP3_IRQn
+ = 3,
+
+66 
+WAKEUP4_IRQn
+ = 4,
+
+67 
+WAKEUP5_IRQn
+ = 5,
+
+68 
+WAKEUP6_IRQn
+ = 6,
+
+69 
+WAKEUP7_IRQn
+ = 7,
+
+70 
+WAKEUP8_IRQn
+ = 8,
+
+71 
+WAKEUP9_IRQn
+ = 9,
+
+72 
+WAKEUP10_IRQn
+ = 10,
+
+73 
+WAKEUP11_IRQn
+ = 11,
+
+74 
+WAKEUP12_IRQn
+ = 12,
+
+75 
+CAN_IRQn
+ = 13,
+
+76 
+SSP1_IRQn
+ = 14,
+
+77 
+I2C_IRQn
+ = 15,
+
+78 
+TIMER_16_0_IRQn
+ = 16,
+
+79 
+TIMER_16_1_IRQn
+ = 17,
+
+80 
+TIMER_32_0_IRQn
+ = 18,
+
+81 
+TIMER_32_1_IRQn
+ = 19,
+
+82 
+SSP0_IRQn
+ = 20,
+
+83 
+UART_IRQn
+ = 21,
+
+84 
+Re£rved0_IRQn
+ = 22,
+
+85 
+Re£rved1_IRQn
+ = 23,
+
+86 
+ADC_IRQn
+ = 24,
+
+87 
+WDT_IRQn
+ = 25,
+
+88 
+BOD_IRQn
+ = 26,
+
+89 
+FMC_IRQn
+ = 27,
+
+90 
+EINT3_IRQn
+ = 28,
+
+91 
+EINT2_IRQn
+ = 29,
+
+92 
+EINT1_IRQn
+ = 30,
+
+93 
+EINT0_IRQn
+ = 31,
+
+94 } 
+	tIRQn_Ty≥
+;
+
+103 
+	#__MPU_PRESENT
+ 0
+
+	)
+
+104 
+	#__NVIC_PRIO_BITS
+ 2
+
+	)
+
+105 
+	#__Víd‹_SysTickC⁄fig
+ 0
+
+	)
+
+110 
+	~"c‹e_cm0.h
+"
+
+111 
+	~"sy°em_LPC11xx.h
+"
+
+118 #i‡
+deföed
+ ( 
+__CC_ARM
+ )
+
+119 #¥agm®
+™⁄_uni⁄s
+
+
+128 
+__IO
+ 
+uöt32_t
+ 
+SYSMEMREMAP
+;
+
+129 
+__IO
+ 
+uöt32_t
+ 
+PRESETCTRL
+;
+
+130 
+__IO
+ 
+uöt32_t
+ 
+SYSPLLCTRL
+;
+
+131 
+__IO
+ 
+uöt32_t
+ 
+SYSPLLSTAT
+;
+
+132 
+uöt32_t
+ 
+RESERVED0
+[4];
+
+134 
+__IO
+ 
+uöt32_t
+ 
+SYSOSCCTRL
+;
+
+135 
+__IO
+ 
+uöt32_t
+ 
+WDTOSCCTRL
+;
+
+136 
+__IO
+ 
+uöt32_t
+ 
+IRCCTRL
+;
+
+137 
+uöt32_t
+ 
+RESERVED1
+[1];
+
+138 
+__IO
+ 
+uöt32_t
+ 
+SYSRSTSTAT
+;
+
+139 
+uöt32_t
+ 
+RESERVED2
+[3];
+
+140 
+__IO
+ 
+uöt32_t
+ 
+SYSPLLCLKSEL
+;
+
+141 
+__IO
+ 
+uöt32_t
+ 
+SYSPLLCLKUEN
+;
+
+142 
+uöt32_t
+ 
+RESERVED3
+[10];
+
+144 
+__IO
+ 
+uöt32_t
+ 
+MAINCLKSEL
+;
+
+145 
+__IO
+ 
+uöt32_t
+ 
+MAINCLKUEN
+;
+
+146 
+__IO
+ 
+uöt32_t
+ 
+SYSAHBCLKDIV
+;
+
+147 
+uöt32_t
+ 
+RESERVED4
+[1];
+
+149 
+__IO
+ 
+uöt32_t
+ 
+SYSAHBCLKCTRL
+;
+
+150 
+uöt32_t
+ 
+RESERVED5
+[4];
+
+151 
+__IO
+ 
+uöt32_t
+ 
+SSP0CLKDIV
+;
+
+152 
+__IO
+ 
+uöt32_t
+ 
+UARTCLKDIV
+;
+
+153 
+__IO
+ 
+uöt32_t
+ 
+SSP1CLKDIV
+;
+
+154 
+uöt32_t
+ 
+RESERVED6
+[12];
+
+156 
+__IO
+ 
+uöt32_t
+ 
+WDTCLKSEL
+;
+
+157 
+__IO
+ 
+uöt32_t
+ 
+WDTCLKUEN
+;
+
+158 
+__IO
+ 
+uöt32_t
+ 
+WDTCLKDIV
+;
+
+159 
+uöt32_t
+ 
+RESERVED8
+[1];
+
+160 
+__IO
+ 
+uöt32_t
+ 
+CLKOUTCLKSEL
+;
+
+161 
+__IO
+ 
+uöt32_t
+ 
+CLKOUTUEN
+;
+
+162 
+__IO
+ 
+uöt32_t
+ 
+CLKOUTDIV
+;
+
+163 
+uöt32_t
+ 
+RESERVED9
+[5];
+
+165 
+__IO
+ 
+uöt32_t
+ 
+PIOPORCAP0
+;
+
+166 
+__IO
+ 
+uöt32_t
+ 
+PIOPORCAP1
+;
+
+167 
+uöt32_t
+ 
+RESERVED10
+[18];
+
+168 
+__IO
+ 
+uöt32_t
+ 
+BODCTRL
+;
+
+169 
+__IO
+ 
+uöt32_t
+ 
+SYSTCKCAL
+;
+
+171 
+uöt32_t
+ 
+RESERVED13
+[7];
+
+172 
+__IO
+ 
+uöt32_t
+ 
+NMISRC
+;
+
+173 
+uöt32_t
+ 
+RESERVED14
+[34];
+
+175 
+__IO
+ 
+uöt32_t
+ 
+STARTAPRP0
+;
+
+176 
+__IO
+ 
+uöt32_t
+ 
+STARTERP0
+;
+
+177 
+__O
+ 
+uöt32_t
+ 
+STARTRSRP0CLR
+;
+
+178 
+__IO
+ 
+uöt32_t
+ 
+STARTSRP0
+;
+
+179 
+__IO
+ 
+uöt32_t
+ 
+STARTAPRP1
+;
+
+180 
+__IO
+ 
+uöt32_t
+ 
+STARTERP1
+;
+
+181 
+__O
+ 
+uöt32_t
+ 
+STARTRSRP1CLR
+;
+
+182 
+__IO
+ 
+uöt32_t
+ 
+STARTSRP1
+;
+
+183 
+uöt32_t
+ 
+RESERVED17
+[4];
+
+185 
+__IO
+ 
+uöt32_t
+ 
+PDSLEEPCFG
+;
+
+186 
+__IO
+ 
+uöt32_t
+ 
+PDAWAKECFG
+;
+
+187 
+__IO
+ 
+uöt32_t
+ 
+PDRUNCFG
+;
+
+188 
+uöt32_t
+ 
+RESERVED15
+[110];
+
+189 
+__I
+ 
+uöt32_t
+ 
+DEVICE_ID
+;
+
+190 } 
+	tLPC_SYSCON_Ty≥Def
+;
+
+200 
+__IO
+ 
+uöt32_t
+ 
+PIO2_6
+;
+
+201 
+uöt32_t
+ 
+RESERVED0
+[1];
+
+202 
+__IO
+ 
+uöt32_t
+ 
+PIO2_0
+;
+
+203 
+__IO
+ 
+uöt32_t
+ 
+RESET_PIO0_0
+;
+
+204 
+__IO
+ 
+uöt32_t
+ 
+PIO0_1
+;
+
+205 
+__IO
+ 
+uöt32_t
+ 
+PIO1_8
+;
+
+206 
+__IO
+ 
+uöt32_t
+ 
+SSEL1_LOC
+;
+
+207 
+__IO
+ 
+uöt32_t
+ 
+PIO0_2
+;
+
+209 
+__IO
+ 
+uöt32_t
+ 
+PIO2_7
+;
+
+210 
+__IO
+ 
+uöt32_t
+ 
+PIO2_8
+;
+
+211 
+__IO
+ 
+uöt32_t
+ 
+PIO2_1
+;
+
+212 
+__IO
+ 
+uöt32_t
+ 
+PIO0_3
+;
+
+213 
+__IO
+ 
+uöt32_t
+ 
+PIO0_4
+;
+
+214 
+__IO
+ 
+uöt32_t
+ 
+PIO0_5
+;
+
+215 
+__IO
+ 
+uöt32_t
+ 
+PIO1_9
+;
+
+216 
+__IO
+ 
+uöt32_t
+ 
+PIO3_4
+;
+
+218 
+__IO
+ 
+uöt32_t
+ 
+PIO2_4
+;
+
+219 
+__IO
+ 
+uöt32_t
+ 
+PIO2_5
+;
+
+220 
+__IO
+ 
+uöt32_t
+ 
+PIO3_5
+;
+
+221 
+__IO
+ 
+uöt32_t
+ 
+PIO0_6
+;
+
+222 
+__IO
+ 
+uöt32_t
+ 
+PIO0_7
+;
+
+223 
+__IO
+ 
+uöt32_t
+ 
+PIO2_9
+;
+
+224 
+__IO
+ 
+uöt32_t
+ 
+PIO2_10
+;
+
+225 
+__IO
+ 
+uöt32_t
+ 
+PIO2_2
+;
+
+227 
+__IO
+ 
+uöt32_t
+ 
+PIO0_8
+;
+
+228 
+__IO
+ 
+uöt32_t
+ 
+PIO0_9
+;
+
+229 
+__IO
+ 
+uöt32_t
+ 
+SWCLK_PIO0_10
+;
+
+230 
+__IO
+ 
+uöt32_t
+ 
+PIO1_10
+;
+
+231 
+__IO
+ 
+uöt32_t
+ 
+PIO2_11
+;
+
+232 
+__IO
+ 
+uöt32_t
+ 
+R_PIO0_11
+;
+
+233 
+__IO
+ 
+uöt32_t
+ 
+R_PIO1_0
+;
+
+234 
+__IO
+ 
+uöt32_t
+ 
+R_PIO1_1
+;
+
+236 
+__IO
+ 
+uöt32_t
+ 
+R_PIO1_2
+;
+
+237 
+__IO
+ 
+uöt32_t
+ 
+PIO3_0
+;
+
+238 
+__IO
+ 
+uöt32_t
+ 
+PIO3_1
+;
+
+239 
+__IO
+ 
+uöt32_t
+ 
+PIO2_3
+;
+
+240 
+__IO
+ 
+uöt32_t
+ 
+SWDIO_PIO1_3
+;
+
+241 
+__IO
+ 
+uöt32_t
+ 
+PIO1_4
+;
+
+242 
+__IO
+ 
+uöt32_t
+ 
+PIO1_11
+;
+
+243 
+__IO
+ 
+uöt32_t
+ 
+PIO3_2
+;
+
+245 
+__IO
+ 
+uöt32_t
+ 
+PIO1_5
+;
+
+246 
+__IO
+ 
+uöt32_t
+ 
+PIO1_6
+;
+
+247 
+__IO
+ 
+uöt32_t
+ 
+PIO1_7
+;
+
+248 
+__IO
+ 
+uöt32_t
+ 
+PIO3_3
+;
+
+249 
+__IO
+ 
+uöt32_t
+ 
+SCK_LOC
+;
+
+250 
+__IO
+ 
+uöt32_t
+ 
+DSR_LOC
+;
+
+251 
+__IO
+ 
+uöt32_t
+ 
+DCD_LOC
+;
+
+252 
+__IO
+ 
+uöt32_t
+ 
+RI_LOC
+;
+
+254 
+__IO
+ 
+uöt32_t
+ 
+CT16B0_CAP0_LOC
+;
+
+255 
+__IO
+ 
+uöt32_t
+ 
+SCK1_LOC
+;
+
+256 
+__IO
+ 
+uöt32_t
+ 
+MISO1_LOC
+;
+
+257 
+__IO
+ 
+uöt32_t
+ 
+MOSI1_LOC
+;
+
+258 
+__IO
+ 
+uöt32_t
+ 
+CT32B0_CAP0_LOC
+;
+
+259 
+__IO
+ 
+uöt32_t
+ 
+RXD_LOC
+;
+
+260 } 
+	tLPC_IOCON_Ty≥Def
+;
+
+270 
+__IO
+ 
+uöt32_t
+ 
+PCON
+;
+
+271 
+__IO
+ 
+uöt32_t
+ 
+GPREG0
+;
+
+272 
+__IO
+ 
+uöt32_t
+ 
+GPREG1
+;
+
+273 
+__IO
+ 
+uöt32_t
+ 
+GPREG2
+;
+
+274 
+__IO
+ 
+uöt32_t
+ 
+GPREG3
+;
+
+275 
+__IO
+ 
+uöt32_t
+ 
+GPREG4
+;
+
+276 } 
+	tLPC_PMU_Ty≥Def
+;
+
+286 
+__I
+ 
+uöt32_t
+ 
+RESERVED0
+[4];
+
+287 
+__IO
+ 
+uöt32_t
+ 
+FLASHCFG
+;
+
+288 
+__I
+ 
+uöt32_t
+ 
+RESERVED1
+[3];
+
+289 
+__IO
+ 
+uöt32_t
+ 
+FMSSTART
+;
+
+290 
+__IO
+ 
+uöt32_t
+ 
+FMSSTOP
+;
+
+291 
+__I
+ 
+uöt32_t
+ 
+RESERVED2
+[1];
+
+292 
+__I
+ 
+uöt32_t
+ 
+FMSW0
+;
+
+293 
+__I
+ 
+uöt32_t
+ 
+FMSW1
+;
+
+294 
+__I
+ 
+uöt32_t
+ 
+FMSW2
+;
+
+295 
+__I
+ 
+uöt32_t
+ 
+FMSW3
+;
+
+296 
+__I
+ 
+uöt32_t
+ 
+RESERVED3
+[1001];
+
+297 
+__I
+ 
+uöt32_t
+ 
+FMSTAT
+;
+
+298 
+__I
+ 
+uöt32_t
+ 
+RESERVED4
+[1];
+
+299 
+__IO
+ 
+uöt32_t
+ 
+FMSTATCLR
+;
+
+300 } 
+	tLPC_FLASHCTRL_Ty≥
+;
+
+310 
+__IO
+ 
+uöt32_t
+ 
+MASKED_ACCESS
+[4096];
+
+312 
+uöt32_t
+ 
+RESERVED0
+[4095];
+
+313 
+__IO
+ 
+uöt32_t
+ 
+DATA
+;
+
+316 
+uöt32_t
+ 
+RESERVED1
+[4096];
+
+317 
+__IO
+ 
+uöt32_t
+ 
+DIR
+;
+
+318 
+__IO
+ 
+uöt32_t
+ 
+IS
+;
+
+319 
+__IO
+ 
+uöt32_t
+ 
+IBE
+;
+
+320 
+__IO
+ 
+uöt32_t
+ 
+IEV
+;
+
+321 
+__IO
+ 
+uöt32_t
+ 
+IE
+;
+
+322 
+__IO
+ 
+uöt32_t
+ 
+RIS
+;
+
+323 
+__IO
+ 
+uöt32_t
+ 
+MIS
+;
+
+324 
+__IO
+ 
+uöt32_t
+ 
+IC
+;
+
+325 } 
+	tLPC_GPIO_Ty≥Def
+;
+
+334 
+__IO
+ 
+uöt32_t
+ 
+IR
+;
+
+335 
+__IO
+ 
+uöt32_t
+ 
+TCR
+;
+
+336 
+__IO
+ 
+uöt32_t
+ 
+TC
+;
+
+337 
+__IO
+ 
+uöt32_t
+ 
+PR
+;
+
+338 
+__IO
+ 
+uöt32_t
+ 
+PC
+;
+
+339 
+__IO
+ 
+uöt32_t
+ 
+MCR
+;
+
+340 
+__IO
+ 
+uöt32_t
+ 
+MR0
+;
+
+341 
+__IO
+ 
+uöt32_t
+ 
+MR1
+;
+
+342 
+__IO
+ 
+uöt32_t
+ 
+MR2
+;
+
+343 
+__IO
+ 
+uöt32_t
+ 
+MR3
+;
+
+344 
+__IO
+ 
+uöt32_t
+ 
+CCR
+;
+
+345 
+__I
+ 
+uöt32_t
+ 
+CR0
+;
+
+346 
+__I
+ 
+uöt32_t
+ 
+CR1
+;
+
+347 
+uöt32_t
+ 
+RESERVED1
+[2];
+
+348 
+__IO
+ 
+uöt32_t
+ 
+EMR
+;
+
+349 
+uöt32_t
+ 
+RESERVED2
+[12];
+
+350 
+__IO
+ 
+uöt32_t
+ 
+CTCR
+;
+
+351 
+__IO
+ 
+uöt32_t
+ 
+PWMC
+;
+
+352 } 
+	tLPC_TMR_Ty≥Def
+;
+
+363 
+__I
+ 
+uöt32_t
+ 
+RBR
+;
+
+364 
+__O
+ 
+uöt32_t
+ 
+THR
+;
+
+365 
+__IO
+ 
+uöt32_t
+ 
+DLL
+;
+
+368 
+__IO
+ 
+uöt32_t
+ 
+DLM
+;
+
+369 
+__IO
+ 
+uöt32_t
+ 
+IER
+;
+
+372 
+__I
+ 
+uöt32_t
+ 
+IIR
+;
+
+373 
+__O
+ 
+uöt32_t
+ 
+FCR
+;
+
+375 
+__IO
+ 
+uöt32_t
+ 
+LCR
+;
+
+376 
+__IO
+ 
+uöt32_t
+ 
+MCR
+;
+
+377 
+__I
+ 
+uöt32_t
+ 
+LSR
+;
+
+378 
+__I
+ 
+uöt32_t
+ 
+MSR
+;
+
+379 
+__IO
+ 
+uöt32_t
+ 
+SCR
+;
+
+380 
+__IO
+ 
+uöt32_t
+ 
+ACR
+;
+
+381 
+uöt32_t
+ 
+RESERVED0
+;
+
+382 
+__IO
+ 
+uöt32_t
+ 
+FDR
+;
+
+383 
+uöt32_t
+ 
+RESERVED1
+;
+
+384 
+__IO
+ 
+uöt32_t
+ 
+TER
+;
+
+385 
+uöt32_t
+ 
+RESERVED2
+[6];
+
+386 
+__IO
+ 
+uöt32_t
+ 
+RS485CTRL
+;
+
+387 
+__IO
+ 
+uöt32_t
+ 
+ADRMATCH
+;
+
+388 
+__IO
+ 
+uöt32_t
+ 
+RS485DLY
+;
+
+389 
+__I
+ 
+uöt32_t
+ 
+FIFOLVL
+;
+
+390 } 
+	tLPC_UART_Ty≥Def
+;
+
+400 
+__IO
+ 
+uöt32_t
+ 
+CR0
+;
+
+401 
+__IO
+ 
+uöt32_t
+ 
+CR1
+;
+
+402 
+__IO
+ 
+uöt32_t
+ 
+DR
+;
+
+403 
+__I
+ 
+uöt32_t
+ 
+SR
+;
+
+404 
+__IO
+ 
+uöt32_t
+ 
+CPSR
+;
+
+405 
+__IO
+ 
+uöt32_t
+ 
+IMSC
+;
+
+406 
+__IO
+ 
+uöt32_t
+ 
+RIS
+;
+
+407 
+__IO
+ 
+uöt32_t
+ 
+MIS
+;
+
+408 
+__IO
+ 
+uöt32_t
+ 
+ICR
+;
+
+409 } 
+	tLPC_SSP_Ty≥Def
+;
+
+419 
+__IO
+ 
+uöt32_t
+ 
+CONSET
+;
+
+420 
+__I
+ 
+uöt32_t
+ 
+STAT
+;
+
+421 
+__IO
+ 
+uöt32_t
+ 
+DAT
+;
+
+422 
+__IO
+ 
+uöt32_t
+ 
+ADR0
+;
+
+423 
+__IO
+ 
+uöt32_t
+ 
+SCLH
+;
+
+424 
+__IO
+ 
+uöt32_t
+ 
+SCLL
+;
+
+425 
+__O
+ 
+uöt32_t
+ 
+CONCLR
+;
+
+426 
+__IO
+ 
+uöt32_t
+ 
+MMCTRL
+;
+
+427 
+__IO
+ 
+uöt32_t
+ 
+ADR1
+;
+
+428 
+__IO
+ 
+uöt32_t
+ 
+ADR2
+;
+
+429 
+__IO
+ 
+uöt32_t
+ 
+ADR3
+;
+
+430 
+__I
+ 
+uöt32_t
+ 
+DATA_BUFFER
+;
+
+431 
+__IO
+ 
+uöt32_t
+ 
+MASK0
+;
+
+432 
+__IO
+ 
+uöt32_t
+ 
+MASK1
+;
+
+433 
+__IO
+ 
+uöt32_t
+ 
+MASK2
+;
+
+434 
+__IO
+ 
+uöt32_t
+ 
+MASK3
+;
+
+435 } 
+	tLPC_I2C_Ty≥Def
+;
+
+445 
+__IO
+ 
+uöt32_t
+ 
+MOD
+;
+
+446 
+__IO
+ 
+uöt32_t
+ 
+TC
+;
+
+447 
+__O
+ 
+uöt32_t
+ 
+FEED
+;
+
+448 
+__I
+ 
+uöt32_t
+ 
+TV
+;
+
+449 
+uöt32_t
+ 
+RESERVED0
+;
+
+450 
+__IO
+ 
+uöt32_t
+ 
+WARNINT
+;
+
+451 
+__IO
+ 
+uöt32_t
+ 
+WINDOW
+;
+
+452 } 
+	tLPC_WDT_Ty≥Def
+;
+
+462 
+__IO
+ 
+uöt32_t
+ 
+CR
+;
+
+463 
+__IO
+ 
+uöt32_t
+ 
+GDR
+;
+
+464 
+uöt32_t
+ 
+RESERVED0
+;
+
+465 
+__IO
+ 
+uöt32_t
+ 
+INTEN
+;
+
+466 
+__IO
+ 
+uöt32_t
+ 
+DR
+[8];
+
+467 
+__I
+ 
+uöt32_t
+ 
+STAT
+;
+
+468 } 
+	tLPC_ADC_Ty≥Def
+;
+
+478 
+__IO
+ 
+uöt32_t
+ 
+CNTL
+;
+
+479 
+__IO
+ 
+uöt32_t
+ 
+STAT
+;
+
+480 
+__IO
+ 
+uöt32_t
+ 
+EC
+;
+
+481 
+__IO
+ 
+uöt32_t
+ 
+BT
+;
+
+482 
+__IO
+ 
+uöt32_t
+ 
+INT
+;
+
+483 
+__IO
+ 
+uöt32_t
+ 
+TEST
+;
+
+484 
+__IO
+ 
+uöt32_t
+ 
+BRPE
+;
+
+485 
+uöt32_t
+ 
+RESERVED0
+;
+
+486 
+__IO
+ 
+uöt32_t
+ 
+IF1_CMDREQ
+;
+
+487 
+__IO
+ 
+uöt32_t
+ 
+IF1_CMDMSK
+;
+
+488 
+__IO
+ 
+uöt32_t
+ 
+IF1_MSK1
+;
+
+489 
+__IO
+ 
+uöt32_t
+ 
+IF1_MSK2
+;
+
+490 
+__IO
+ 
+uöt32_t
+ 
+IF1_ARB1
+;
+
+491 
+__IO
+ 
+uöt32_t
+ 
+IF1_ARB2
+;
+
+492 
+__IO
+ 
+uöt32_t
+ 
+IF1_MCTRL
+;
+
+493 
+__IO
+ 
+uöt32_t
+ 
+IF1_DA1
+;
+
+494 
+__IO
+ 
+uöt32_t
+ 
+IF1_DA2
+;
+
+495 
+__IO
+ 
+uöt32_t
+ 
+IF1_DB1
+;
+
+496 
+__IO
+ 
+uöt32_t
+ 
+IF1_DB2
+;
+
+497 
+uöt32_t
+ 
+RESERVED1
+[13];
+
+498 
+__IO
+ 
+uöt32_t
+ 
+IF2_CMDREQ
+;
+
+499 
+__IO
+ 
+uöt32_t
+ 
+IF2_CMDMSK
+;
+
+500 
+__IO
+ 
+uöt32_t
+ 
+IF2_MSK1
+;
+
+501 
+__IO
+ 
+uöt32_t
+ 
+IF2_MSK2
+;
+
+502 
+__IO
+ 
+uöt32_t
+ 
+IF2_ARB1
+;
+
+503 
+__IO
+ 
+uöt32_t
+ 
+IF2_ARB2
+;
+
+504 
+__IO
+ 
+uöt32_t
+ 
+IF2_MCTRL
+;
+
+505 
+__IO
+ 
+uöt32_t
+ 
+IF2_DA1
+;
+
+506 
+__IO
+ 
+uöt32_t
+ 
+IF2_DA2
+;
+
+507 
+__IO
+ 
+uöt32_t
+ 
+IF2_DB1
+;
+
+508 
+__IO
+ 
+uöt32_t
+ 
+IF2_DB2
+;
+
+509 
+uöt32_t
+ 
+RESERVED2
+[21];
+
+510 
+__I
+ 
+uöt32_t
+ 
+TXREQ1
+;
+
+511 
+__I
+ 
+uöt32_t
+ 
+TXREQ2
+;
+
+512 
+uöt32_t
+ 
+RESERVED3
+[6];
+
+513 
+__I
+ 
+uöt32_t
+ 
+ND1
+;
+
+514 
+__I
+ 
+uöt32_t
+ 
+ND2
+;
+
+515 
+uöt32_t
+ 
+RESERVED4
+[6];
+
+516 
+__I
+ 
+uöt32_t
+ 
+IR1
+;
+
+517 
+__I
+ 
+uöt32_t
+ 
+IR2
+;
+
+518 
+uöt32_t
+ 
+RESERVED5
+[6];
+
+519 
+__I
+ 
+uöt32_t
+ 
+MSGV1
+;
+
+520 
+__I
+ 
+uöt32_t
+ 
+MSGV2
+;
+
+521 
+uöt32_t
+ 
+RESERVED6
+[6];
+
+522 
+__IO
+ 
+uöt32_t
+ 
+CLKDIV
+;
+
+523 } 
+	tLPC_CAN_Ty≥Def
+;
+
+526 #i‡
+deföed
+ ( 
+__CC_ARM
+ )
+
+527 #¥agm®
+no_™⁄_uni⁄s
+
+
+534 
+	#LPC_FLASH_BASE
+ (0x00000000UL)
+
+	)
+
+535 
+	#LPC_RAM_BASE
+ (0x10000000UL)
+
+	)
+
+536 
+	#LPC_APB0_BASE
+ (0x40000000UL)
+
+	)
+
+537 
+	#LPC_AHB_BASE
+ (0x50000000UL)
+
+	)
+
+540 
+	#LPC_I2C_BASE
+ (
+LPC_APB0_BASE
+ + 0x00000)
+
+	)
+
+541 
+	#LPC_WDT_BASE
+ (
+LPC_APB0_BASE
+ + 0x04000)
+
+	)
+
+542 
+	#LPC_UART_BASE
+ (
+LPC_APB0_BASE
+ + 0x08000)
+
+	)
+
+543 
+	#LPC_CT16B0_BASE
+ (
+LPC_APB0_BASE
+ + 0x0C000)
+
+	)
+
+544 
+	#LPC_CT16B1_BASE
+ (
+LPC_APB0_BASE
+ + 0x10000)
+
+	)
+
+545 
+	#LPC_CT32B0_BASE
+ (
+LPC_APB0_BASE
+ + 0x14000)
+
+	)
+
+546 
+	#LPC_CT32B1_BASE
+ (
+LPC_APB0_BASE
+ + 0x18000)
+
+	)
+
+547 
+	#LPC_ADC_BASE
+ (
+LPC_APB0_BASE
+ + 0x1C000)
+
+	)
+
+548 
+	#LPC_PMU_BASE
+ (
+LPC_APB0_BASE
+ + 0x38000)
+
+	)
+
+549 
+	#LPC_FLASHCTRL_BASE
+ (
+LPC_APB0_BASE
+ + 0x3C000)
+
+	)
+
+550 
+	#LPC_SSP0_BASE
+ (
+LPC_APB0_BASE
+ + 0x40000)
+
+	)
+
+551 
+	#LPC_IOCON_BASE
+ (
+LPC_APB0_BASE
+ + 0x44000)
+
+	)
+
+552 
+	#LPC_SYSCON_BASE
+ (
+LPC_APB0_BASE
+ + 0x48000)
+
+	)
+
+553 
+	#LPC_CAN_BASE
+ (
+LPC_APB0_BASE
+ + 0x50000)
+
+	)
+
+554 
+	#LPC_SSP1_BASE
+ (
+LPC_APB0_BASE
+ + 0x58000)
+
+	)
+
+557 
+	#LPC_GPIO_BASE
+ (
+LPC_AHB_BASE
+ + 0x00000)
+
+	)
+
+558 
+	#LPC_GPIO0_BASE
+ (
+LPC_AHB_BASE
+ + 0x00000)
+
+	)
+
+559 
+	#LPC_GPIO1_BASE
+ (
+LPC_AHB_BASE
+ + 0x10000)
+
+	)
+
+560 
+	#LPC_GPIO2_BASE
+ (
+LPC_AHB_BASE
+ + 0x20000)
+
+	)
+
+561 
+	#LPC_GPIO3_BASE
+ (
+LPC_AHB_BASE
+ + 0x30000)
+
+	)
+
+566 
+	#LPC_I2C
+ ((
+LPC_I2C_Ty≥Def
+ *Ë
+LPC_I2C_BASE
+ )
+
+	)
+
+567 
+	#LPC_WDT
+ ((
+LPC_WDT_Ty≥Def
+ *Ë
+LPC_WDT_BASE
+ )
+
+	)
+
+568 
+	#LPC_UART
+ ((
+LPC_UART_Ty≥Def
+ *Ë
+LPC_UART_BASE
+ )
+
+	)
+
+569 
+	#LPC_TMR16B0
+ ((
+LPC_TMR_Ty≥Def
+ *Ë
+LPC_CT16B0_BASE
+)
+
+	)
+
+570 
+	#LPC_TMR16B1
+ ((
+LPC_TMR_Ty≥Def
+ *Ë
+LPC_CT16B1_BASE
+)
+
+	)
+
+571 
+	#LPC_TMR32B0
+ ((
+LPC_TMR_Ty≥Def
+ *Ë
+LPC_CT32B0_BASE
+)
+
+	)
+
+572 
+	#LPC_TMR32B1
+ ((
+LPC_TMR_Ty≥Def
+ *Ë
+LPC_CT32B1_BASE
+)
+
+	)
+
+573 
+	#LPC_ADC
+ ((
+LPC_ADC_Ty≥Def
+ *Ë
+LPC_ADC_BASE
+ )
+
+	)
+
+574 
+	#LPC_PMU
+ ((
+LPC_PMU_Ty≥Def
+ *Ë
+LPC_PMU_BASE
+ )
+
+	)
+
+575 
+	#LPC_FLASHCTRL
+ ((
+LPC_FLASHCTRL_Ty≥
+ *Ë
+LPC_FLASHCTRL_BASE
+)
+
+	)
+
+576 
+	#LPC_SSP0
+ ((
+LPC_SSP_Ty≥Def
+ *Ë
+LPC_SSP0_BASE
+ )
+
+	)
+
+577 
+	#LPC_SSP1
+ ((
+LPC_SSP_Ty≥Def
+ *Ë
+LPC_SSP1_BASE
+ )
+
+	)
+
+578 
+	#LPC_CAN
+ ((
+LPC_CAN_Ty≥Def
+ *Ë
+LPC_CAN_BASE
+ )
+
+	)
+
+579 
+	#LPC_IOCON
+ ((
+LPC_IOCON_Ty≥Def
+ *Ë
+LPC_IOCON_BASE
+ )
+
+	)
+
+580 
+	#LPC_SYSCON
+ ((
+LPC_SYSCON_Ty≥Def
+ *Ë
+LPC_SYSCON_BASE
+)
+
+	)
+
+581 
+	#LPC_GPIO0
+ ((
+LPC_GPIO_Ty≥Def
+ *Ë
+LPC_GPIO0_BASE
+ )
+
+	)
+
+582 
+	#LPC_GPIO1
+ ((
+LPC_GPIO_Ty≥Def
+ *Ë
+LPC_GPIO1_BASE
+ )
+
+	)
+
+583 
+	#LPC_GPIO2
+ ((
+LPC_GPIO_Ty≥Def
+ *Ë
+LPC_GPIO2_BASE
+ )
+
+	)
+
+584 
+	#LPC_GPIO3
+ ((
+LPC_GPIO_Ty≥Def
+ *Ë
+LPC_GPIO3_BASE
+ )
+
+	)
+
+586 #ifde‡
+__˝lu•lus
+
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Led.h
+
+1 #i‚de‡
+LED_H
+
+
+2 
+	#LED_H
+
+
+	)
+
+4 
+	~"defs.h
+"
+
+7 
+	mÀdA
+, 
+	mÀdB
+ = 0x0a
+
+8 }
+	tÀd
+;
+
+10 
+Led_Inô
+();
+
+12 
+Led_Së
+(
+Àd
+ 
+l
+, 
+boﬁ
+ 
+°©e
+);
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\POWER_~1.H
+
+20 #i‚de‡
+__LPC11XX_POWER_API_H__
+
+
+21 
+	#__LPC11XX_POWER_API_H__
+
+
+	)
+
+23 #ifde‡
+__˝lu•lus
+
+
+27 
+	#PWRROMD_PRESENT
+
+
+	)
+
+29 
+	s_PWRD
+ {
+
+30 (*
+£t_∂l
+)(
+cmd
+[], 
+ª•
+[]);
+
+31 (*
+£t_powî
+)(
+cmd
+[], 
+ª•
+[]);
+
+32 } 
+	tPWRD
+;
+
+34 
+	s_ROM
+ {
+
+35 #ifde‡
+USBROMD_PRESENT
+
+
+36 c⁄° 
+USB
+ * 
+pUSBD
+;
+
+38 c⁄° 
+p_usbd
+;
+
+40 c⁄° 
+p_˛ib
+;
+
+41 c⁄° 
+p_ˇnd
+;
+
+42 #ifde‡
+PWRROMD_PRESENT
+
+
+43 c⁄° 
+PWRD
+ * 
+pPWRD
+;
+
+45 c⁄° 
+p_pwrd
+;
+
+47 c⁄° 
+p_dev1
+;
+
+48 c⁄° 
+p_dev2
+;
+
+49 c⁄° 
+p_dev3
+;
+
+50 c⁄° 
+p_dev4
+;
+
+51 } 
+	tROM
+;
+
+54 
+	#CPU_FREQ_EQU
+ 0
+
+55 
+	#CPU_FREQ_LTE
+ 1
+
+56 
+	#CPU_FREQ_GTE
+ 2
+
+57 
+	#CPU_FREQ_CLOSE
+ 3
+
+58 
+
+	)
+
+59 
+	#PLL_CMD_CUCCESS
+ 0
+
+60 
+	#PLL_INVALID_FREQ
+ 1
+
+61 
+	#PLL_INVALID_MODE
+ 2
+
+62 
+	#PLL_FREQ_NOT_FOUND
+ 3
+
+63 
+	#PLL_NOT_LOCKED
+ 4
+
+64 
+
+	)
+
+66 
+	#PARAM_DEFAULT
+ 0
+
+67 
+	#PARAM_CPU_PERFORMANCE
+ 1
+
+68 
+	#PARAM_EFFICIENCY
+ 2
+
+69 
+	#PARAM_LOW_CURRENT
+ 3
+
+70 
+
+	)
+
+71 
+	#PARAM_CMD_CUCCESS
+ 0
+
+72 
+	#PARAM_INVALID_FREQ
+ 1
+
+73 
+	#PARAM_INVALID_MODE
+ 2
+
+74 
+
+	)
+
+75 
+	#MAX_CLOCK_KHZ_PARAM
+ 50000
+
+	)
+
+77 #ifde‡
+__˝lu•lus
+
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Port_HAL.h
+
+1 #i‚de‡
+HAL_PORT_H
+
+
+2 
+	#HAL_PORT_H
+
+
+	)
+
+4 
+	~<LPC11xx.h
+>
+
+6 
+	#P‹t_HAL_PöDú
+(
+p‹t
+, 
+pö
+, 
+dú
+Ë(
+LPC_GPIO
+##p‹t->
+DIR
+ = dú ? LPC_GPIO##p‹t->DIR | (1 <<ÖöË: LPC_GPIO##p‹t->DIR & ~(1 <<Öö))
+
+	)
+
+7 
+	#P‹t_HAL_SëOuçut
+(
+p‹t
+, 
+pö
+, 
+lvl
+Ë(
+LPC_GPIO
+##p‹t->
+DATA
+ =Üv»? LPC_GPIO##p‹t->DATA | (1 <<ÖöË: LPC_GPIO##p‹t->DATA & ~(1 <<Öö))
+
+	)
+
+10 
+	mINPUT
+, 
+	mOUTPUT
+
+
+14 
+	mLOW
+, 
+	mHIGH
+
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\RTC.h
+
+1 #i‚de‡
+RTC_H
+
+
+2 
+	#RTC_H
+
+
+	)
+
+4 
+	#RTC_ADDR
+ 0xD0
+
+	)
+
+7 
+	mπcSECOND
+, 
+	mπcMINUTE
+, 
+	mπcHOUR
+, 
+	mπcDAY
+, 
+	mπcDATE
+, 
+	mπcMONTH
+, 
+	mπcYEAR
+
+
+8 }
+	tπcP¨am
+;
+
+10 
+RTC_Inô
+();
+
+12 
+RTC_SëP¨am
+(
+πcP¨am
+ 
+p
+, 
+v
+);
+
+14 
+RTC_RódP¨am
+(
+πcP¨am
+ 
+p
+);
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\SYSTEM~1.H
+
+26 #i‚de‡
+__SYSTEM_LPC11xx_H
+
+
+27 
+	#__SYSTEM_LPC11xx_H
+
+
+	)
+
+29 #ifde‡
+__˝lu•lus
+
+
+33 
+	~<°döt.h
+>
+
+35 
+uöt32_t
+ 
+Sy°emC‹eClock
+;
+
+47 
+Sy°emInô
+ ();
+
+58 
+Sy°emC‹eClockUpd©e
+ ();
+
+60 #ifde‡
+__˝lu•lus
+
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\System.h
+
+1 #i‚de‡
+SYSTEM_H
+
+
+2 
+	#SYSTEM_H
+
+
+	)
+
+4 
+	#SYS_CLK
+ 12000000L
+
+	)
+
+6 
+ölöe
+ 
+DñayCy˛
+(
+c
+);
+
+8 
+ölöe
+ 
+DñayMs
+(
+m
+);
+
+10 
+ölöe
+ 
+DñayUs
+(
+u
+);
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\defs.h
+
+1 #i‚de‡
+DEFS_H
+
+
+2 
+	#DEFS_H
+
+
+	)
+
+5 
+	mÁl£
+, 
+	måue
+
+
+6 }
+	tboﬁ
+;
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\App.c
+
+1 
+	~"Aµ.h
+"
+
+3 
+	~"Sy°em.h
+"
+
+5 
+	~"LCD.h
+"
+
+6 
+	~"RTC.h
+"
+
+7 
+	~"Keybﬂrd.h
+"
+
+8 
+	~"Led.h
+"
+
+9 
+	~"HAL_i2c.h
+"
+
+10 
+	~"HAL_ADC.h
+"
+
+11 
+	~"DAC.h
+"
+
+12 
+	~"Eïrom.h
+"
+
+13 
+	~"FuncGí.h
+"
+
+15 
+	$Aµ_Inô
+(){
+
+16 
+	`HAL_ADC_Inô
+();
+
+17 
+	`HAL_i2c_Inô
+();
+
+18 
+	`KBD_Inô
+();
+
+19 
+	`LCD_Inô
+();
+
+20 
+	`Led_Inô
+();
+
+21 
+	`RTC_Inô
+();
+
+22 
+	`FuncGí_Inô
+();
+
+23 
+	`FuncGí_Sèπ
+(
+·Söe
+);
+
+24 
+	}
+}
+
+26 
+	gcy˛˙t
+ = 0;
+
+28 
+	$Aµ
+(){
+
+30 
+cy˛˙t
+++;
+
+32 if(
+cy˛˙t
+ < 50){
+
+33 
+	`Led_Së
+(
+ÀdA
+, 
+HIGH
+);
+
+34 
+	`Led_Së
+(
+ÀdB
+, 
+LOW
+);
+
+36 if(
+cy˛˙t
+ >= 50 && cyclcnt <= 100){
+
+37 
+	`Led_Së
+(
+ÀdA
+, 
+LOW
+);
+
+38 
+	`Led_Së
+(
+ÀdB
+, 
+HIGH
+);
+
+41 
+cy˛˙t
+ = 0;
+
+43 
+	`FuncGí_Pro˚ss
+();
+
+45 
+	`LCD_WrôeComm™d
+(
+lcdCURSOR_HOME
+);
+
+46 
+	`LCD_WrôeComm™d
+(
+lcdCURSOR_OFF
+);
+
+48 
+	`Eïrom_Wrôe
+(0x0001, 5);
+
+49 
+	`LCD_WrôeD©a
+(
+	`Eïrom_Ród
+(0x0001) + 48);
+
+53 
+	`LCD_WrôeSåög
+("Y:");
+
+54 
+	`LCD_WrôeD©a
+(((
+	`RTC_RódP¨am
+(
+πcYEAR
+) & 0xf0) >> 4) + 48);
+
+55 
+	`LCD_WrôeD©a
+((
+	`RTC_RódP¨am
+(
+πcYEAR
+) & 0x0f) + 48);
+
+58 
+	`LCD_WrôeSåög
+("M:");
+
+59 
+	`LCD_WrôeD©a
+(((
+	`RTC_RódP¨am
+(
+πcMONTH
+) & 0xf0) >> 4) + 48);
+
+60 
+	`LCD_WrôeD©a
+((
+	`RTC_RódP¨am
+(
+πcMONTH
+) & 0x0f) + 48);
+
+63 
+	`LCD_WrôeSåög
+("D:");
+
+64 
+	`LCD_WrôeD©a
+(((
+	`RTC_RódP¨am
+(
+πcDAY
+) & 0xf0) >> 4) + 48);
+
+65 
+	`LCD_WrôeD©a
+((
+	`RTC_RódP¨am
+(
+πcDAY
+) & 0x0f) + 48);
+
+68 
+	`LCD_WrôeSåög
+("M:");
+
+69 
+	`LCD_WrôeD©a
+(((
+	`RTC_RódP¨am
+(
+πcMINUTE
+) & 0xf0) >> 4) + 48);
+
+70 
+	`LCD_WrôeD©a
+((
+	`RTC_RódP¨am
+(
+πcMINUTE
+) & 0x0f) + 48);
+
+72 
+	`LCD_WrôeComm™d
+(
+lcdSETTOXX
+ | 0x40);
+
+75 
+	`LCD_WrôeSåög
+("S:");
+
+76 
+	`LCD_WrôeD©a
+(((
+	`RTC_RódP¨am
+(
+πcSECOND
+) & 0xf0) >> 4) + 48);
+
+77 
+	`LCD_WrôeD©a
+((
+	`RTC_RódP¨am
+(
+πcSECOND
+) & 0x0f) + 48);
+
+79 
+keybﬂrdKey
+ 
+ãmpKey
+ = 
+	`KBD_GëKey
+();
+
+80 if(
+ãmpKey
+ !
+kbdNULL
+){
+
+81 
+	`LCD_WrôeSåög
+(" KEY:");
+
+82 
+	`LCD_WrôeD©a
+(
+ãmpKey
+ + 48);
+
+85 
+	`LCD_WrôeSåög
+(" ");
+
+87 
+	`LCD_WrôeSåög
+(" GRP:2");
+
+90 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\DAC.c
+
+1 
+	~"DAC.h
+"
+
+3 
+	~"HAL_i2c.h
+"
+
+5 
+	$DAC_Inô
+(){
+
+8 
+	}
+}
+
+10 
+	$DAC_SëVﬁège
+(
+v
+){
+
+12 
+c⁄vVÆue
+ = ()((()
+v
+*4096)/(
+DAC_VREF
+*1000));
+
+14 if(
+c⁄vVÆue
+ > 4095) convValue = 4095;
+
+16 
+ãmpD©a
+[3];
+
+18 
+ãmpD©a
+[0] = ()(0b01000000);
+
+19 
+ãmpD©a
+[1] = ()((
+c⁄vVÆue
+ >> 4) & 0xff);
+
+20 
+ãmpD©a
+[2] = ()((
+c⁄vVÆue
+ << 4) & 0xff);
+
+22 
+	`HAL_i2c_Síd
+(()
+idvDAC
+, 
+ãmpD©a
+, 3, 1);
+
+23 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\Eeprom.c
+
+1 
+	~"Eïrom.h
+"
+
+3 
+	~"HAL_i2c.h
+"
+
+5 
+	$Eïrom_Inô
+(){
+
+7 
+	}
+}
+
+9 
+	$Eïrom_Wrôe
+(
+addr
+, 
+d©a
+){
+
+10 
+ãmp
+[3];
+
+12 
+ãmp
+[0] = (
+addr
+ >> 8) & 0xff;
+
+13 
+ãmp
+[1] = 
+addr
+ & 0xff;
+
+14 
+ãmp
+[2] = 
+d©a
+;
+
+16 
+	`HAL_i2c_Síd
+(
+idvEEPROM
+, 
+ãmp
+, 3, 1);
+
+18 
+	}
+}
+
+20 
+	$Eïrom_Ród
+(
+addr
+){
+
+21 
+ãmp
+[2];
+
+23 
+ãmp
+[0] = (
+addr
+ >> 8) & 0xff;
+
+24 
+ãmp
+[1] = 
+addr
+ & 0xff;
+
+28  
+	`HAL_i2c_Re˚ive
+(
+idvEEPROM
+ | 0x01);
+
+30 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\FuncGen.c
+
+1 
+	~"FuncGí.h
+"
+
+3 
+	~<LPC11xx.h
+>
+
+5 
+	gfunc
+[2] = {2000, 1000};
+
+7 
+	gi
+ = 0;
+
+9 
+	$FuncGí_Inô
+(){
+
+10 
+LPC_SYSCON
+->
+SYSAHBCLKCTRL
+ |= 1 << 8;
+
+12 
+LPC_TMR16B1
+->
+PR
+ = 12000;
+
+13 
+LPC_TMR16B1
+->
+MCR
+ = 3;
+
+15 
+LPC_TMR16B1
+->
+MR0
+ = 999;
+
+19 
+	}
+}
+
+21 
+	$FuncGí_Sèπ
+(
+funcTy≥
+ 
+f
+){
+
+22 
+LPC_TMR16B1
+->
+TC
+ = 0;
+
+24 
+LPC_TMR16B1
+->
+IR
+ = 0xff;
+
+26 
+LPC_TMR16B1
+->
+TCR
+ |= 1;
+
+28 
+	}
+}
+
+30 
+	$FuncGí_Pro˚ss
+(){
+
+31 
+up
+ = 1;
+
+33 
+	`DAC_SëVﬁège
+(()
+i
+);
+
+35 if(
+up
+){
+
+36 
+i
+ += 100;
+
+37 if(
+i
+ >= 3000){
+
+38 
+up
+ = 0;
+
+39 
+i
+ = 3000;
+
+43 
+i
+ -= 100;
+
+44 if(
+i
+ <= 0){
+
+45 
+up
+ = 1;
+
+46 
+i
+ = 0;
+
+51 
+	}
+}
+
+53 
+	$TIM0_IRQH™dÀr
+(){
+
+55 i‡–
+LPC_TMR16B1
+->
+IR
+ & 0x1 ){
+
+56 
+LPC_TMR16B1
+->
+IR
+ = 1;
+
+58 
+i
+++;
+
+59 if(
+i
+==2)
+
+60 
+i
+=0;
+
+64 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\HAL_ADC.c
+
+1 
+	~"HAL_ADC.h
+"
+
+3 
+	~<LPC11xx.h
+>
+
+5 
+	$HAL_ADC_Inô
+(){
+
+6 
+LPC_SYSCON
+->
+SYSAHBCLKCTRL
+ |= (1<<13);
+
+7 
+LPC_SYSCON
+->
+PDRUNCFG
+ &= ~(1<<4);
+
+9 
+LPC_ADC
+->
+CR
+ = 0x1700;
+
+11 
+LPC_IOCON
+->
+R_PIO0_11
+ = 0x01;
+
+12 
+LPC_IOCON
+->
+PIO1_11
+ = 0x01;
+
+13 
+LPC_IOCON
+->
+PIO1_10
+ = 0x01;
+
+14 
+	}
+}
+
+16 
+	$HAL_ADC_SëCh™√l
+(
+ch
+){
+
+17 
+LPC_ADC
+->
+CR
+ &= ~(0xff);
+
+18 
+LPC_ADC
+->
+CR
+ |(1 << 
+ch
+);
+
+19 
+	}
+}
+
+21 
+	$HAL_ADC_GëSam∂e
+(){
+
+22 
+LPC_ADC
+->
+CR
+ |= (1<<24);
+
+24 !(
+LPC_ADC
+->
+GDR
+ & (1<<31)));
+
+26  (
+LPC_ADC
+->
+GDR
+ & 0xffc0) >> 6;
+
+27 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\HAL_i2c.c
+
+1 
+	~"HAL_i2c.h
+"
+
+3 
+	~"LCD.h
+"
+
+5 
+	~"Sy°em.h
+"
+
+7 
+	$HAL_i2c_Inô
+(){
+
+8 
+LPC_SYSCON
+->
+SYSAHBCLKCTRL
+ |= 0x20;
+
+9 
+LPC_SYSCON
+->
+SYSAHBCLKCTRL
+ |= (1<<16);
+
+10 
+LPC_SYSCON
+->
+PRESETCTRL
+ |= 0x02;
+
+12 
+LPC_IOCON
+->
+PIO0_4
+ |= 0x1;
+
+13 
+LPC_IOCON
+->
+PIO0_5
+ |= 0x1;
+
+15 
+LPC_I2C
+->
+SCLH
+ = 240;
+
+16 
+LPC_I2C
+->
+SCLL
+ = 240;
+
+18 
+LPC_I2C
+->
+CONSET
+ |= 0x40;
+
+19 
+	}
+}
+
+21 
+	$HAL_i2c_Síd
+(
+addr
+, *
+buf„r
+, 
+buf„rSize
+, 
+°›
+){
+
+23 
+£ndC¡
+;
+
+25 
+LPC_I2C
+->
+CONSET
+ = 0x20;
+
+27 
+LPC_I2C
+->
+STAT
+ != 0x8);
+
+29 
+LPC_I2C
+->
+DAT
+ = (Ë
+addr
+;
+
+31 
+LPC_I2C
+->
+CONCLR
+ = 0x28;
+
+33 
+LPC_I2C
+->
+STAT
+ != 0x18);
+
+35 
+£ndC¡
+ = 0; sídC¡ < 
+buf„rSize
+; sendCnt++){
+
+36 
+LPC_I2C
+->
+DAT
+ = ()
+buf„r
+[
+£ndC¡
+];
+
+37 
+LPC_I2C
+->
+CONCLR
+ = 0x8;
+
+38 
+LPC_I2C
+->
+STAT
+ != 0x28);
+
+42 if(
+°›
+){
+
+43 
+LPC_I2C
+->
+CONSET
+ = 0x10;
+
+46 
+LPC_I2C
+->
+CONSET
+ = 0x20;
+
+48 
+LPC_I2C
+->
+CONCLR
+ = 0x8;
+
+49 
+	}
+}
+
+51 
+	$HAL_i2c_Re˚ive
+(
+addr
+){
+
+53 
+LPC_I2C
+->
+CONSET
+ = 0x20;
+
+54 
+LPC_I2C
+->
+STAT
+ != 0x8);
+
+56 
+LPC_I2C
+->
+DAT
+ = ()
+addr
+ + 1;
+
+57 
+LPC_I2C
+->
+CONCLR
+ = 0x28;
+
+58 
+LPC_I2C
+->
+STAT
+ != 0x40);
+
+60 
+LPC_I2C
+->
+CONCLR
+ = 0x2C;
+
+61 (
+LPC_I2C
+->
+STAT
+ != 0x50) && (LPC_I2C->STAT != 0x58));
+
+63 
+d©a
+ = 
+LPC_I2C
+->
+DAT
+;
+
+65 
+LPC_I2C
+->
+CONSET
+ = 0x10;
+
+66 
+LPC_I2C
+->
+CONCLR
+ = 0x8;
+
+68  
+d©a
+;
+
+69 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\Keyboard.c
+
+1 
+	~"Keybﬂrd.h
+"
+
+3 
+	~"HAL_ADC.h
+"
+
+5 
+	#VREF
+ 3.3
+
+	)
+
+7 
+	#R1
+ 2000
+
+	)
+
+8 
+	#R2
+ 330
+
+	)
+
+9 
+	#R3
+ 620
+
+	)
+
+10 
+	#R4
+ 1000
+
+	)
+
+11 
+	#R5
+ 3300
+
+	)
+
+13 
+	#TH1
+ (0)
+
+	)
+
+14 
+	#TH2
+ (1023*(()
+R2
+/(R2+
+R1
+)))
+
+	)
+
+15 
+	#TH3
+ (1023*(()(
+R3
++
+R2
+)/(R3+R2+
+R1
+)))
+
+	)
+
+16 
+	#TH4
+ (1023*(()(
+R4
++
+R3
++
+R2
+)/(R4+R3+R2+
+R1
+)))
+
+	)
+
+17 
+	#TH5
+ (1023*(()(
+R5
++
+R4
++
+R3
++
+R2
+)/(R5+R4+R3+R2+
+R1
+)))
+
+	)
+
+19 
+	#DEAD_ZONE
+ 50
+
+	)
+
+21 
+	$KBD_Inô
+(){
+
+23 
+	`HAL_ADC_SëCh™√l
+(
+KBD_AD_CH
+);
+
+24 
+	}
+}
+
+26 
+keybﬂrdKey
+ 
+	$KBD_GëKey
+(){
+
+27 
+ãmp
+;
+
+29 
+ãmp
+ = 
+	`HAL_ADC_GëSam∂e
+();
+
+31 if(
+ãmp
+ < 
+TH1
+ + 
+DEAD_ZONE
+)
+
+32  
+kbdKEY5
+;
+
+33 if(
+ãmp
+ < 
+TH2
+ + 
+DEAD_ZONE
+)
+
+34  
+kbdKEY4
+;
+
+35 if(
+ãmp
+ < 
+TH3
+ + 
+DEAD_ZONE
+)
+
+36  
+kbdKEY3
+;
+
+37 if(
+ãmp
+ < 
+TH4
+ + 
+DEAD_ZONE
+)
+
+38  
+kbdKEY2
+;
+
+39 if(
+ãmp
+ < 
+TH5
+ + 
+DEAD_ZONE
+)
+
+40  
+kbdKEY1
+;
+
+42  
+kbdNULL
+;
+
+44 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\LCD.c
+
+1 
+	~"LCD.h
+"
+
+2 
+	~"Sy°em.h
+"
+
+4 
+LCD_Såobe
+();
+
+5 
+LCD_WrôeByã
+(
+vÆ‹
+, 
+d©a
+);
+
+7 
+	$LCD_Inô
+(){
+
+9 
+	`DñayMs
+(15);
+
+11 
+LPC_IOCON
+->
+PIO3_5
+ = 0;
+
+12 
+LPC_IOCON
+->
+PIO1_8
+ = 0;
+
+13 
+LPC_IOCON
+->
+PIO0_2
+ = 0;
+
+14 
+LPC_IOCON
+->
+PIO2_7
+ = 0;
+
+15 
+LPC_IOCON
+->
+PIO2_8
+ = 0;
+
+16 
+LPC_IOCON
+->
+PIO2_1
+ = 0;
+
+17 
+LPC_IOCON
+->
+PIO0_3
+ = 0;
+
+18 
+LPC_IOCON
+->
+PIO3_4
+ = 0;
+
+19 
+LPC_IOCON
+->
+PIO2_4
+ = 0;
+
+20 
+LPC_IOCON
+->
+PIO2_5
+ = 0;
+
+22 
+	`P‹t_HAL_PöDú
+(3, 5, 
+OUTPUT
+);
+
+23 
+	`P‹t_HAL_PöDú
+(1, 8, 
+OUTPUT
+);
+
+24 
+	`P‹t_HAL_PöDú
+(0, 2, 
+OUTPUT
+);
+
+25 
+	`P‹t_HAL_PöDú
+(2, 7, 
+OUTPUT
+);
+
+26 
+	`P‹t_HAL_PöDú
+(2, 8, 
+OUTPUT
+);
+
+27 
+	`P‹t_HAL_PöDú
+(2, 1, 
+OUTPUT
+);
+
+28 
+	`P‹t_HAL_PöDú
+(0, 3, 
+OUTPUT
+);
+
+29 
+	`P‹t_HAL_PöDú
+(3, 4, 
+OUTPUT
+);
+
+30 
+	`P‹t_HAL_PöDú
+(2, 4, 
+OUTPUT
+);
+
+31 
+	`P‹t_HAL_PöDú
+(2, 5, 
+OUTPUT
+);
+
+33 
+	`DñayMs
+(16);
+
+35 
+	`LCD_WrôeByã
+(0x30, 0);
+
+37 
+	`DñayMs
+(2);
+
+39 
+	`LCD_WrôeByã
+(0x3C, 0);
+
+41 
+	`DñayMs
+(16);
+
+43 
+	`LCD_WrôeByã
+(0x0f, 0);
+
+45 
+	`DñayMs
+(16);
+
+47 
+	`LCD_WrôeByã
+(0x01, 0);
+
+49 
+	`DñayMs
+(16);
+
+51 
+	`LCD_WrôeByã
+(0x06, 0);
+
+53 
+	`DñayMs
+(16);
+
+54 
+	}
+}
+
+56 
+	$LCD_WrôeComm™d
+(
+lcdCmd
+ 
+cmd
+){
+
+57 
+	`LCD_WrôeByã
+(()
+cmd
+, 0);
+
+59 if(
+cmd
+ =
+lcdCLEAR
+ || cmd =
+lcdCURSOR_HOME
+){
+
+60 
+	`DñayUs
+(1700);
+
+62 
+	}
+}
+
+64 
+	$LCD_WrôeD©a
+(
+d©a
+){
+
+65 
+	`LCD_WrôeByã
+(
+d©a
+, 1);
+
+66 
+	}
+}
+
+69 
+	$LCD_WrôeSåög
+(*
+°r
+){
+
+70 *
+°r
+){
+
+71 
+	`LCD_WrôeByã
+(*
+°r
+++, 1);
+
+73 
+	}
+}
+
+75 
+	$LCD_Såobe
+(){
+
+76 
+	`P‹t_HAL_SëOuçut
+(2, 5, 
+HIGH
+);
+
+77 
+	`DñayUs
+(40);
+
+78 
+	`P‹t_HAL_SëOuçut
+(2, 5, 
+LOW
+);
+
+79 
+	`DñayUs
+(40);
+
+80 
+	}
+}
+
+82 
+	$LCD_WrôeByã
+(
+vÆ‹
+, 
+d©a
+){
+
+84 
+	`P‹t_HAL_SëOuçut
+(3, 5, 
+d©a
+);
+
+86 
+	`P‹t_HAL_SëOuçut
+(1, 8 ,(
+vÆ‹
+ & 0x80) >> 7);
+
+87 
+	`P‹t_HAL_SëOuçut
+(0, 2 ,(
+vÆ‹
+ & 0x40) >> 6);
+
+88 
+	`P‹t_HAL_SëOuçut
+(2, 7 ,(
+vÆ‹
+ & 0x20) >> 5);
+
+89 
+	`P‹t_HAL_SëOuçut
+(2, 8 ,(
+vÆ‹
+ & 0x10) >> 4);
+
+90 
+	`P‹t_HAL_SëOuçut
+(2, 1 ,(
+vÆ‹
+ & 0x08) >> 3);
+
+91 
+	`P‹t_HAL_SëOuçut
+(0, 3 ,(
+vÆ‹
+ & 0x04) >> 2);
+
+92 
+	`P‹t_HAL_SëOuçut
+(3, 4 ,(
+vÆ‹
+ & 0x02) >> 1);
+
+93 
+	`P‹t_HAL_SëOuçut
+(2, 4 ,(
+vÆ‹
+ & 0x01));
+
+95 
+	`DñayUs
+(50);
+
+97 
+	`LCD_Såobe
+();
+
+98 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\Led.c
+
+1 
+	~"Led.h
+"
+
+3 
+	~<LPC11xx.h
+>
+
+5 
+	~"P‹t_HAL.h
+"
+
+7 
+	$Led_Inô
+(){
+
+8 
+	`P‹t_HAL_PöDú
+(2, ()
+ÀdA
+, 
+OUTPUT
+);
+
+9 
+	`P‹t_HAL_PöDú
+(2, ()
+ÀdB
+, 
+OUTPUT
+);
+
+11 
+	`P‹t_HAL_SëOuçut
+(2, ()
+ÀdA
+, 
+LOW
+);
+
+12 
+	`P‹t_HAL_SëOuçut
+(2, ()
+ÀdB
+, 
+LOW
+);
+
+13 
+	}
+}
+
+15 
+	$Led_Së
+(
+Àd
+ 
+l
+, 
+boﬁ
+ 
+°©e
+){
+
+16 
+	`P‹t_HAL_SëOuçut
+(2, ()
+l
+, 
+°©e
+);
+
+17 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\RTC.c
+
+1 
+	~"RTC.h
+"
+
+3 
+	~"HAL_i2c.h
+"
+
+4 
+	~"RTC.h
+"
+
+6 
+	$RTC_Inô
+(){
+
+7 
+	`RTC_SëP¨am
+(
+πcSECOND
+, 0);
+
+8 
+	`RTC_SëP¨am
+(
+πcMINUTE
+, 0);
+
+9 
+	`RTC_SëP¨am
+(
+πcHOUR
+, 0);
+
+10 
+	`RTC_SëP¨am
+(
+πcDAY
+, 0);
+
+11 
+	`RTC_SëP¨am
+(
+πcDATE
+, 1);
+
+12 
+	`RTC_SëP¨am
+(
+πcMONTH
+, 1);
+
+13 
+	`RTC_SëP¨am
+(
+πcYEAR
+, 0);
+
+14 
+	}
+}
+
+16 
+	$RTC_SëP¨am
+(
+πcP¨am
+ 
+p
+, 
+v
+){
+
+17 
+ãmp
+[2] = {()
+p
+ , 
+v
+};
+
+18 
+	`HAL_i2c_Síd
+(
+idvRTC
+, 
+ãmp
+, 2, 1);
+
+20 
+	}
+}
+
+22 
+	$RTC_RódP¨am
+(
+πcP¨am
+ 
+p
+){
+
+23 
+	`HAL_i2c_Síd
+(
+idvRTC
+, (*)&
+p
+, 1, 1);
+
+24  
+	`HAL_i2c_Re˚ive
+(
+idvRTC
+);
+
+25 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\STARTU~1.S
+
+63 .
+sy¡ax
+ 
+	gunifõd
+
+
+65 .
+¨ch
+ 
+	g¨mv6
+-
+	gm
+
+
+69 .
+	g£˘i⁄
+ .
+	g°ack
+
+
+71 .
+	gÆign
+ 3
+
+73 #ifde‡
+__STACK_SIZE
+
+
+75 .
+equ
+ 
+	gSèck_Size
+, 
+	g__STACK_SIZE
+
+
+79 .
+equ
+ 
+	gSèck_Size
+, 0x400
+
+83 .
+globl
+ 
+	g__SèckT›
+
+
+85 .
+globl
+ 
+__SèckLimô
+
+
+87 
+	g__SèckLimô
+:
+
+89 .
+•a˚
+ 
+Sèck_Size
+
+
+91 .
+size
+ 
+__SèckLimô
+, . - __StackLimit
+
+93 
+	g__SèckT›
+:
+
+95 .
+size
+ 
+__SèckT›
+, . - 
+	g__SèckT›
+
+
+99 .
+	g£˘i⁄
+ .
+	ghóp
+
+
+101 .
+	gÆign
+ 3
+
+103 #ifde‡
+__HEAP_SIZE
+
+
+105 .
+equ
+ 
+	gHóp_Size
+, 
+	g__HEAP_SIZE
+
+
+109 .
+equ
+ 
+	gHóp_Size
+, 0xC00
+
+113 .
+globl
+ 
+	g__HópBa£
+
+
+115 .
+globl
+ 
+__HópLimô
+
+
+117 
+	g__HópBa£
+:
+
+119 .
+Hóp_Size
+
+
+121 .
+•a˚
+ 
+Hóp_Size
+
+
+123 .
+ídif
+
+
+125 .
+size
+ 
+__HópBa£
+, . - __HeapBase
+
+127 
+	g__HópLimô
+:
+
+129 .
+size
+ 
+__HópLimô
+, . - 
+	g__HópLimô
+
+
+133 .
+	g£˘i⁄
+ .
+	gi§_ve˘‹
+
+
+135 .
+	gÆign
+ 2
+
+137 .
+globl
+ 
+__i§_ve˘‹
+
+
+139 
+	g__i§_ve˘‹
+:
+
+141 .
+__SèckT›
+
+
+143 .
+Re£t_H™dÀr
+
+
+145 .
+NMI_H™dÀr
+
+
+147 .
+H¨dFau…_H™dÀr
+
+
+163 .
+SVC_H™dÀr
+
+
+169 .
+PídSV_H™dÀr
+
+
+171 .
+SysTick_H™dÀr
+
+
+177 .
+WDT_IRQH™dÀr
+
+
+179 .
+RTC_IRQH™dÀr
+
+
+181 .
+TIM0_IRQH™dÀr
+
+
+183 .
+TIM2_IRQH™dÀr
+
+
+185 .
+MCIA_IRQH™dÀr
+
+
+187 .
+MCIB_IRQH™dÀr
+
+
+189 .
+UART0_IRQH™dÀr
+
+
+191 .
+UART1_IRQH™dÀr
+
+
+193 .
+UART2_IRQH™dÀr
+
+
+195 .
+UART4_IRQH™dÀr
+
+
+197 .
+AACI_IRQH™dÀr
+
+
+199 .
+CLCD_IRQH™dÀr
+
+
+201 .
+ENET_IRQH™dÀr
+
+
+203 .
+USBDC_IRQH™dÀr
+
+
+205 .
+USBHC_IRQH™dÀr
+
+
+207 .
+CHLCD_IRQH™dÀr
+
+
+209 .
+FLEXRAY_IRQH™dÀr
+
+
+211 .
+CAN_IRQH™dÀr
+
+
+213 .
+LIN_IRQH™dÀr
+
+
+215 .
+I2C_IRQH™dÀr
+
+
+233 .
+CPU_CLCD_IRQH™dÀr
+
+
+237 .
+UART3_IRQH™dÀr
+
+
+239 .
+SPI_IRQH™dÀr
+
+
+243 .
+size
+ 
+__i§_ve˘‹
+, . - 
+	g__i§_ve˘‹
+
+
+247 .
+	gãxt
+
+
+249 .
+	gthumb
+
+
+251 .
+	gthumb_func
+
+
+253 .
+	gÆign
+ 2
+
+255 .
+globl
+ 
+	gRe£t_H™dÀr
+
+
+257 .
+ty≥
+ 
+	gRe£t_H™dÀr
+, %
+fun˘i⁄
+
+
+259 
+	gRe£t_H™dÀr
+:
+
+275 
+ldr
+ 
+r1
+, =
+__ëext
+
+
+277 
+ldr
+ 
+r2
+, =
+__d©a_°¨t__
+
+
+279 
+ldr
+ 
+r3
+, =
+__d©a_íd__
+
+
+283 
+subs
+ 
+r3
+, 
+r2
+
+
+285 
+	gbÀ
+ .
+Êash_to_øm_lo›_íd
+
+
+289 
+movs
+ 
+	gr4
+, 0
+
+291 .
+	gÊash_to_øm_lo›
+:
+
+293 
+ldr
+ 
+r0
+, [
+r1
+,
+r4
+]
+
+295 
+°r
+ 
+	gr0
+, [
+r2
+,
+r4
+]
+
+297 
+adds
+ 
+	gr4
+, 4
+
+299 
+cmp
+ 
+	gr4
+, 
+r3
+
+
+301 
+	gb…
+ .
+	gÊash_to_øm_lo›
+
+
+303 .
+	gÊash_to_øm_lo›_íd
+:
+
+307 #i‚de‡
+__NO_SYSTEM_INIT
+
+
+309 
+ldr
+ 
+r0
+, =
+Sy°emInô
+
+
+311 
+blx
+ 
+r0
+
+
+317 
+ldr
+ 
+r0
+, =
+_°¨t
+
+
+319 
+bx
+ 
+r0
+
+
+321 .
+poﬁ
+
+
+323 .
+size
+ 
+Re£t_H™dÀr
+, . - 
+	gRe£t_H™dÀr
+
+
+333 .
+ma¸o
+ 
+def_úq_h™dÀr
+ 
+	gh™dÀr_«me
+
+
+335 .
+	gÆign
+ 1
+
+337 .
+	gthumb_func
+
+
+339 .
+	gwók
+ \
+	gh™dÀr_«me
+
+
+341 .
+	gty≥
+ \
+	gh™dÀr_«me
+, %
+	gfun˘i⁄
+
+
+343 \
+	gh™dÀr_«me
+ :
+
+345 
+b
+ .
+
+347 .
+size
+ \
+h™dÀr_«me
+, . - \
+	gh™dÀr_«me
+
+
+349 .
+ídm
+
+
+353 
+def_úq_h™dÀr
+ 
+NMI_H™dÀr
+
+
+355 
+def_úq_h™dÀr
+ 
+H¨dFau…_H™dÀr
+
+
+357 
+def_úq_h™dÀr
+ 
+SVC_H™dÀr
+
+
+359 
+def_úq_h™dÀr
+ 
+PídSV_H™dÀr
+
+
+361 
+def_úq_h™dÀr
+ 
+SysTick_H™dÀr
+
+
+363 
+def_úq_h™dÀr
+ 
+DeÁu…_H™dÀr
+
+
+367 
+def_úq_h™dÀr
+ 
+WDT_IRQH™dÀr
+
+
+369 
+def_úq_h™dÀr
+ 
+RTC_IRQH™dÀr
+
+
+371 
+def_úq_h™dÀr
+ 
+TIM0_IRQH™dÀr
+
+
+373 
+def_úq_h™dÀr
+ 
+TIM2_IRQH™dÀr
+
+
+375 
+def_úq_h™dÀr
+ 
+MCIA_IRQH™dÀr
+
+
+377 
+def_úq_h™dÀr
+ 
+MCIB_IRQH™dÀr
+
+
+379 
+def_úq_h™dÀr
+ 
+UART0_IRQH™dÀr
+
+
+381 
+def_úq_h™dÀr
+ 
+UART1_IRQH™dÀr
+
+
+383 
+def_úq_h™dÀr
+ 
+UART2_IRQH™dÀr
+
+
+385 
+def_úq_h™dÀr
+ 
+UART3_IRQH™dÀr
+
+
+387 
+def_úq_h™dÀr
+ 
+UART4_IRQH™dÀr
+
+
+389 
+def_úq_h™dÀr
+ 
+AACI_IRQH™dÀr
+
+
+391 
+def_úq_h™dÀr
+ 
+CLCD_IRQH™dÀr
+
+
+393 
+def_úq_h™dÀr
+ 
+ENET_IRQH™dÀr
+
+
+395 
+def_úq_h™dÀr
+ 
+USBDC_IRQH™dÀr
+
+
+397 
+def_úq_h™dÀr
+ 
+USBHC_IRQH™dÀr
+
+
+399 
+def_úq_h™dÀr
+ 
+CHLCD_IRQH™dÀr
+
+
+401 
+def_úq_h™dÀr
+ 
+FLEXRAY_IRQH™dÀr
+
+
+403 
+def_úq_h™dÀr
+ 
+CAN_IRQH™dÀr
+
+
+405 
+def_úq_h™dÀr
+ 
+LIN_IRQH™dÀr
+
+
+407 
+def_úq_h™dÀr
+ 
+I2C_IRQH™dÀr
+
+
+409 
+def_úq_h™dÀr
+ 
+CPU_CLCD_IRQH™dÀr
+
+
+411 
+def_úq_h™dÀr
+ 
+	gSPI_IRQH™dÀr
+
+
+415 .
+	gíd
+
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\SYSTEM~1.C
+
+51 
+	~<°döt.h
+>
+
+53 
+	~"LPC11xx.h
+"
+
+213 
+	#CLOCK_SETUP
+ 1
+
+	)
+
+215 
+	#SYSOSCCTRL_VÆ
+ 0x00000000
+
+216 
+
+	)
+
+217 
+	#WDTOSCCTRL_VÆ
+ 0x00000000
+
+218 
+
+	)
+
+219 
+	#SYSPLLCTRL_VÆ
+ 0x00000023
+
+220 
+
+	)
+
+221 
+	#SYSPLLCLKSEL_VÆ
+ 0x00000001
+
+222 
+
+	)
+
+223 
+	#MAINCLKSEL_VÆ
+ 0x00000003
+
+224 
+
+	)
+
+225 
+	#SYSAHBCLKDIV_VÆ
+ 0x00000001
+
+226 
+
+	)
+
+243 
+	#CHECK_RANGE
+(
+vÆ
+, 
+mö
+, 
+max
+Ë((vÆ < möË|| (vÆ > max))
+
+	)
+
+245 
+	#CHECK_RSVD
+(
+vÆ
+, 
+mask
+Ë(vÆ & mask)
+
+	)
+
+251 #i‡(
+CHECK_RSVD
+((
+SYSOSCCTRL_VÆ
+), ~0x00000003))
+
+259 #i‡(
+CHECK_RSVD
+((
+WDTOSCCTRL_VÆ
+), ~0x000001FF))
+
+267 #i‡(
+CHECK_RANGE
+((
+SYSPLLCLKSEL_VÆ
+), 0, 2))
+
+275 #i‡(
+CHECK_RSVD
+((
+SYSPLLCTRL_VÆ
+), ~0x000001FF))
+
+283 #i‡(
+CHECK_RSVD
+((
+MAINCLKSEL_VÆ
+), ~0x00000003))
+
+291 #i‡(
+CHECK_RANGE
+((
+SYSAHBCLKDIV_VÆ
+), 0, 255))
+
+315 
+	#__XTAL
+ (12000000ULË
+
+	)
+
+317 
+	#__SYS_OSC_CLK
+ ( 
+__XTAL
+Ë
+
+	)
+
+319 
+	#__IRC_OSC_CLK
+ (12000000ULË
+
+	)
+
+325 
+	#__FREQSEL
+ ((
+WDTOSCCTRL_VÆ
+ >> 5Ë& 0x0F)
+
+	)
+
+327 
+	#__DIVSEL
+ (((
+WDTOSCCTRL_VÆ
+ & 0x1FË<< 1Ë+ 2)
+
+	)
+
+331 #i‡(
+CLOCK_SETUP
+)
+
+333 #i‡ (
+__FREQSEL
+ == 0)
+
+335 
+	#__WDT_OSC_CLK
+ ( 0Ë
+
+	)
+
+337 #ñi‡(
+__FREQSEL
+ == 1)
+
+339 
+	#__WDT_OSC_CLK
+ ( 500000 / 
+__DIVSEL
+)
+
+	)
+
+341 #ñi‡(
+__FREQSEL
+ == 2)
+
+343 
+	#__WDT_OSC_CLK
+ ( 800000 / 
+__DIVSEL
+)
+
+	)
+
+345 #ñi‡(
+__FREQSEL
+ == 3)
+
+347 
+	#__WDT_OSC_CLK
+ (1100000 / 
+__DIVSEL
+)
+
+	)
+
+349 #ñi‡(
+__FREQSEL
+ == 4)
+
+351 
+	#__WDT_OSC_CLK
+ (1400000 / 
+__DIVSEL
+)
+
+	)
+
+353 #ñi‡(
+__FREQSEL
+ == 5)
+
+355 
+	#__WDT_OSC_CLK
+ (1600000 / 
+__DIVSEL
+)
+
+	)
+
+357 #ñi‡(
+__FREQSEL
+ == 6)
+
+359 
+	#__WDT_OSC_CLK
+ (1800000 / 
+__DIVSEL
+)
+
+	)
+
+361 #ñi‡(
+__FREQSEL
+ == 7)
+
+363 
+	#__WDT_OSC_CLK
+ (2000000 / 
+__DIVSEL
+)
+
+	)
+
+365 #ñi‡(
+__FREQSEL
+ == 8)
+
+367 
+	#__WDT_OSC_CLK
+ (2200000 / 
+__DIVSEL
+)
+
+	)
+
+369 #ñi‡(
+__FREQSEL
+ == 9)
+
+371 
+	#__WDT_OSC_CLK
+ (2400000 / 
+__DIVSEL
+)
+
+	)
+
+373 #ñi‡(
+__FREQSEL
+ == 10)
+
+375 
+	#__WDT_OSC_CLK
+ (2600000 / 
+__DIVSEL
+)
+
+	)
+
+377 #ñi‡(
+__FREQSEL
+ == 11)
+
+379 
+	#__WDT_OSC_CLK
+ (2700000 / 
+__DIVSEL
+)
+
+	)
+
+381 #ñi‡(
+__FREQSEL
+ == 12)
+
+383 
+	#__WDT_OSC_CLK
+ (2900000 / 
+__DIVSEL
+)
+
+	)
+
+385 #ñi‡(
+__FREQSEL
+ == 13)
+
+387 
+	#__WDT_OSC_CLK
+ (3100000 / 
+__DIVSEL
+)
+
+	)
+
+389 #ñi‡(
+__FREQSEL
+ == 14)
+
+391 
+	#__WDT_OSC_CLK
+ (3200000 / 
+__DIVSEL
+)
+
+	)
+
+395 
+	#__WDT_OSC_CLK
+ (3400000 / 
+__DIVSEL
+)
+
+	)
+
+403 #i‡ ((
+SYSPLLCLKSEL_VÆ
+ & 0x03) == 0)
+
+405 
+	#__SYS_PLLCLKIN
+ (
+__IRC_OSC_CLK
+)
+
+	)
+
+407 #ñi‡((
+SYSPLLCLKSEL_VÆ
+ & 0x03) == 1)
+
+409 
+	#__SYS_PLLCLKIN
+ (
+__SYS_OSC_CLK
+)
+
+	)
+
+413 
+	#__SYS_PLLCLKIN
+ (0)
+
+	)
+
+419 
+	#__SYS_PLLCLKOUT
+ (
+__SYS_PLLCLKIN
+ * ((
+SYSPLLCTRL_VÆ
+ & 0x01FË+ 1))
+
+	)
+
+425 #i‡ ((
+MAINCLKSEL_VÆ
+ & 0x03) == 0)
+
+427 
+	#__MAIN_CLOCK
+ (
+__IRC_OSC_CLK
+)
+
+	)
+
+429 #ñi‡((
+MAINCLKSEL_VÆ
+ & 0x03) == 1)
+
+431 
+	#__MAIN_CLOCK
+ (
+__SYS_PLLCLKIN
+)
+
+	)
+
+433 #ñi‡((
+MAINCLKSEL_VÆ
+ & 0x03) == 2)
+
+435 #i‡(
+__FREQSEL
+ == 0)
+
+441 
+	#__MAIN_CLOCK
+ (
+__WDT_OSC_CLK
+)
+
+	)
+
+445 #ñi‡((
+MAINCLKSEL_VÆ
+ & 0x03) == 3)
+
+447 
+	#__MAIN_CLOCK
+ (
+__SYS_PLLCLKOUT
+)
+
+	)
+
+451 
+	#__MAIN_CLOCK
+ (0)
+
+	)
+
+457 
+	#__SYSTEM_CLOCK
+ (
+__MAIN_CLOCK
+ / 
+SYSAHBCLKDIV_VÆ
+)
+
+	)
+
+463 
+	#__SYSTEM_CLOCK
+ (
+__IRC_OSC_CLK
+)
+
+	)
+
+477 
+uöt32_t
+ 
+	gSy°emC‹eClock
+ = 
+__SYSTEM_CLOCK
+;
+
+489 
+	$Sy°emC‹eClockUpd©e
+ ()
+
+493 
+uöt32_t
+ 
+wdt_osc
+ = 0;
+
+499 (
+LPC_SYSCON
+->
+WDTOSCCTRL
+ >> 5) & 0x0F) {
+
+501 0: 
+wdt_osc
+ = 0; ;
+
+503 1: 
+wdt_osc
+ = 500000; ;
+
+505 2: 
+wdt_osc
+ = 800000; ;
+
+507 3: 
+wdt_osc
+ = 1100000; ;
+
+509 4: 
+wdt_osc
+ = 1400000; ;
+
+511 5: 
+wdt_osc
+ = 1600000; ;
+
+513 6: 
+wdt_osc
+ = 1800000; ;
+
+515 7: 
+wdt_osc
+ = 2000000; ;
+
+517 8: 
+wdt_osc
+ = 2200000; ;
+
+519 9: 
+wdt_osc
+ = 2400000; ;
+
+521 10: 
+wdt_osc
+ = 2600000; ;
+
+523 11: 
+wdt_osc
+ = 2700000; ;
+
+525 12: 
+wdt_osc
+ = 2900000; ;
+
+527 13: 
+wdt_osc
+ = 3100000; ;
+
+529 14: 
+wdt_osc
+ = 3200000; ;
+
+531 15: 
+wdt_osc
+ = 3400000; ;
+
+535 
+wdt_osc
+ /((
+LPC_SYSCON
+->
+WDTOSCCTRL
+ & 0x1F) << 1) + 2;
+
+539 
+LPC_SYSCON
+->
+MAINCLKSEL
+ & 0x03) {
+
+543 
+Sy°emC‹eClock
+ = 
+__IRC_OSC_CLK
+;
+
+549 
+LPC_SYSCON
+->
+SYSPLLCLKSEL
+ & 0x03) {
+
+553 
+Sy°emC‹eClock
+ = 
+__IRC_OSC_CLK
+;
+
+559 
+Sy°emC‹eClock
+ = 
+__SYS_OSC_CLK
+;
+
+567 
+Sy°emC‹eClock
+ = 0;
+
+577 
+Sy°emC‹eClock
+ = 
+wdt_osc
+;
+
+583 
+LPC_SYSCON
+->
+SYSPLLCLKSEL
+ & 0x03) {
+
+587 i‡(
+LPC_SYSCON
+->
+SYSPLLCTRL
+ & 0x180) {
+
+589 
+Sy°emC‹eClock
+ = 
+__IRC_OSC_CLK
+;
+
+593 
+Sy°emC‹eClock
+ = 
+__IRC_OSC_CLK
+ * ((
+LPC_SYSCON
+->
+SYSPLLCTRL
+ & 0x01F) + 1);
+
+601 i‡(
+LPC_SYSCON
+->
+SYSPLLCTRL
+ & 0x180) {
+
+603 
+Sy°emC‹eClock
+ = 
+__SYS_OSC_CLK
+;
+
+607 
+Sy°emC‹eClock
+ = 
+__SYS_OSC_CLK
+ * ((
+LPC_SYSCON
+->
+SYSPLLCTRL
+ & 0x01F) + 1);
+
+617 
+Sy°emC‹eClock
+ = 0;
+
+629 
+Sy°emC‹eClock
+ /
+LPC_SYSCON
+->
+SYSAHBCLKDIV
+;
+
+633 
+	}
+}
+
+655 
+	$Sy°emInô
+ () {
+
+657 vﬁ©ûê
+uöt32_t
+ 
+i
+;
+
+661 #i‡(
+CLOCK_SETUP
+)
+
+665 #i‡((
+SYSPLLCLKSEL_VÆ
+ & 0x03) == 1)
+
+667 
+LPC_SYSCON
+->
+PDRUNCFG
+ &= ~(1 << 5);
+
+669 
+LPC_SYSCON
+->
+SYSOSCCTRL
+ = 
+SYSOSCCTRL_VÆ
+;
+
+671 
+i
+ = 0; i < 200; i++Ë
+	`__NOP
+();
+
+677 
+LPC_SYSCON
+->
+SYSPLLCLKSEL
+ = 
+SYSPLLCLKSEL_VÆ
+;
+
+679 
+LPC_SYSCON
+->
+SYSPLLCLKUEN
+ = 0x01;
+
+681 
+LPC_SYSCON
+->
+SYSPLLCLKUEN
+ = 0x00;
+
+683 
+LPC_SYSCON
+->
+SYSPLLCLKUEN
+ = 0x01;
+
+685 !(
+LPC_SYSCON
+->
+SYSPLLCLKUEN
+ & 0x01));
+
+687 #i‡((
+MAINCLKSEL_VÆ
+ & 0x03) == 3)
+
+689 
+LPC_SYSCON
+->
+SYSPLLCTRL
+ = 
+SYSPLLCTRL_VÆ
+;
+
+691 
+LPC_SYSCON
+->
+PDRUNCFG
+ &= ~(1 << 7);
+
+693 !(
+LPC_SYSCON
+->
+SYSPLLSTAT
+ & 0x01));
+
+699 #i‡(((
+MAINCLKSEL_VÆ
+ & 0x03) == 2) )
+
+701 
+LPC_SYSCON
+->
+WDTOSCCTRL
+ = 
+WDTOSCCTRL_VÆ
+;
+
+703 
+LPC_SYSCON
+->
+PDRUNCFG
+ &= ~(1 << 6);
+
+705 
+i
+ = 0; i < 200; i++Ë
+	`__NOP
+();
+
+711 
+LPC_SYSCON
+->
+MAINCLKSEL
+ = 
+MAINCLKSEL_VÆ
+;
+
+713 
+LPC_SYSCON
+->
+MAINCLKUEN
+ = 0x01;
+
+715 
+LPC_SYSCON
+->
+MAINCLKUEN
+ = 0x00;
+
+717 
+LPC_SYSCON
+->
+MAINCLKUEN
+ = 0x01;
+
+719 !(
+LPC_SYSCON
+->
+MAINCLKUEN
+ & 0x01));
+
+723 
+LPC_SYSCON
+->
+SYSAHBCLKDIV
+ = 
+SYSAHBCLKDIV_VÆ
+;
+
+729 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\System.c
+
+1 
+	~"Sy°em.h
+"
+
+3 
+ölöe
+ 
+	$DñayCy˛
+(
+c
+){
+
+4 
+c_cou¡
+;
+
+6 
+c
+ = ()(c/2);
+
+8 
+c_cou¡
+ = 0 ; c_cou¡ <
+c
+ ; c_count++);
+
+9 
+	}
+}
+
+11 
+ölöe
+ 
+	$DñayMs
+(
+m
+){
+
+12 
+m_cou¡
+;
+
+13 
+	#MS_CONST
+ (()(
+SYS_CLK
+/1000))
+
+	)
+
+15 
+m
+ = ()(m*(
+MS_CONST
+/4));
+
+17 
+m_cou¡
+ = 0 ; m_cou¡ <
+m
+ ; m_count++);
+
+18 
+	}
+}
+
+20 
+ölöe
+ 
+	$DñayUs
+(
+u
+){
+
+21 
+u_cou¡
+;
+
+22 
+	#US_CONST
+ (()(
+SYS_CLK
+/1000000))
+
+	)
+
+24 
+u
+ = ()(u*(
+US_CONST
+/4));
+
+26 
+u_cou¡
+ = 0 ; u_cou¡ <
+u
+ ; u_count++);
+
+28 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\main.c
+
+1 
+	~"Aµ.h
+"
+
+3 
+	~<LPC11xx.h
+>
+
+5 
+	$maö
+(){
+
+7 
+LPC_SYSCON
+->
+SYSAHBCLKCTRL
+ |= (1<<6) | (1<<16);
+
+9 
+	`Aµ_Inô
+();
+
+11 
+	`__íabÀ_úq
+();
+
+15 
+	`Aµ
+();
+
+17 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\gcc_arm.ld
+
+6 
+	gMEMORY
+
+
+8 
+FLASH
+ (
+rx
+Ë: 
+ORIGIN
+ = 0x00000000, 
+	gLENGTH
+ = 0x08000
+
+9 
+RAM
+ (
+rwx
+Ë: 
+ORIGIN
+ = 0x10000000, 
+	gLENGTH
+ = 0x02000
+
+39 
+	$ENTRY
+(
+Re£t_H™dÀr
+)
+
+41 
+SECTIONS
+
+
+43 .
+ãxt
+ :
+
+45 
+	`KEEP
+(*(.
+i§_ve˘‹
+))
+
+46 *(.
+ãxt
+*)
+
+48 
+	`KEEP
+(*(.
+öô
+))
+
+49 
+	`KEEP
+(*(.
+föi
+))
+
+52 *
+¸tbegö
+.
+	`o
+(.
+˘‹s
+)
+
+53 *
+¸tbegö
+?.
+	`o
+(.
+˘‹s
+)
+
+54 *(
+	`EXCLUDE_FILE
+(*
+¸ãnd
+?.
+o
+ *¸ãnd.oË.
+˘‹s
+)
+
+55 *(
+	`SORT
+(.
+˘‹s
+.*))
+
+56 *(.
+˘‹s
+)
+
+59 *
+¸tbegö
+.
+	`o
+(.
+dt‹s
+)
+
+60 *
+¸tbegö
+?.
+	`o
+(.
+dt‹s
+)
+
+61 *(
+	`EXCLUDE_FILE
+(*
+¸ãnd
+?.
+o
+ *¸ãnd.oË.
+dt‹s
+)
+
+62 *(
+	`SORT
+(.
+dt‹s
+.*))
+
+63 *(.
+dt‹s
+)
+
+65 *(.
+rod©a
+*)
+
+67 
+	`KEEP
+(*(.
+eh_‰ame
+*))
+
+68 } > 
+FLASH
+
+
+70 .
+ARM
+.
+exèb
+ :
+
+72 *(.
+ARM
+.
+exèb
+* .
+gnu
+.
+lök⁄˚
+.
+¨mexèb
+.*)
+
+73 } > 
+FLASH
+
+
+75 
+__exidx_°¨t
+ = .;
+
+76 .
+ARM
+.
+exidx
+ :
+
+78 *(.
+ARM
+.
+exidx
+* .
+gnu
+.
+lök⁄˚
+.
+¨mexidx
+.*)
+
+79 } > 
+FLASH
+
+
+80 
+__exidx_íd
+ = .;
+
+82 
+__ëext
+ = .;
+
+84 .
+d©a
+ : 
+	`AT
+ (
+__ëext
+)
+
+86 
+__d©a_°¨t__
+ = .;
+
+87 *(
+vèbÀ
+)
+
+88 *(.
+d©a
+*)
+
+90 . = 
+	`ALIGN
+(4);
+
+92 
+	`PROVIDE_HIDDEN
+ (
+__¥eöô_¨øy_°¨t
+ = .);
+
+93 
+	`KEEP
+(*(.
+¥eöô_¨øy
+))
+
+94 
+	`PROVIDE_HIDDEN
+ (
+__¥eöô_¨øy_íd
+ = .);
+
+96 . = 
+	`ALIGN
+(4);
+
+98 
+	`PROVIDE_HIDDEN
+ (
+__öô_¨øy_°¨t
+ = .);
+
+99 
+	`KEEP
+(*(
+	`SORT
+(.
+öô_¨øy
+.*)))
+
+100 
+	`KEEP
+(*(.
+öô_¨øy
+))
+
+101 
+	`PROVIDE_HIDDEN
+ (
+__öô_¨øy_íd
+ = .);
+
+104 . = 
+	`ALIGN
+(4);
+
+106 
+	`PROVIDE_HIDDEN
+ (
+__föi_¨øy_°¨t
+ = .);
+
+107 
+	`KEEP
+(*(
+	`SORT
+(.
+föi_¨øy
+.*)))
+
+108 
+	`KEEP
+(*(.
+föi_¨øy
+))
+
+109 
+	`PROVIDE_HIDDEN
+ (
+__föi_¨øy_íd
+ = .);
+
+111 . = 
+	`ALIGN
+(4);
+
+113 
+__d©a_íd__
+ = .;
+
+115 } > 
+RAM
+
+
+117 .
+bss
+ :
+
+119 
+__bss_°¨t__
+ = .;
+
+120 *(.
+bss
+*)
+
+121 *(
+COMMON
+)
+
+122 
+__bss_íd__
+ = .;
+
+123 } > 
+RAM
+
+
+125 .
+hóp
+ :
+
+127 
+__íd__
+ = .;
+
+128 
+íd
+ = 
+__íd__
+;
+
+129 *(.
+hóp
+*)
+
+130 
+__HópLimô
+ = .;
+
+131 } > 
+RAM
+
+
+136 .
+°ack_dummy
+ :
+
+138 *(.
+°ack
+)
+
+139 } > 
+RAM
+
+
+143 
+__SèckT›
+ = 
+	`ORIGIN
+(
+RAM
+Ë+ 
+	`LENGTH
+(RAM);
+
+144 
+__SèckLimô
+ = 
+__SèckT›
+ - 
+	`SIZEOF
+(.
+°ack_dummy
+);
+
+145 
+	`PROVIDE
+(
+__°ack
+ = 
+__SèckT›
+);
+
+148 
+	`ASSERT
+(
+__SèckLimô
+ >
+__HópLimô
+, "region RAM overflowed with stack")
+
+149 
+	}
+}
+
+	@C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\readme.txt
+
+1 
+You
+ 
+have
+ 
+to
+ 
+£t
+ 
+the
+ 
+c‹ª˘
+ 
+mem‹y
+ 
+œyout
+ 
+your
+ 
+devi˚
+ 
+ö
+Åhê
+lökî
+ 
+	gs¸ùt
+.
+
+2 
+PÀa£
+ 
+check
+ 
+the
+ 
+FLASH
+ 
+™d
+ 
+SRAM
+ 
+	gÀngth
+.
+
+4 
+	ge
+.
+	gg
+.
+
+7 
+	gMEMORY
+
+
+9 
+FLASH
+ (
+rx
+Ë: 
+ORIGIN
+ = 0x08000000, 
+	gLENGTH
+ = 0x08000
+
+10 
+RAM
+ (
+rwx
+Ë: 
+ORIGIN
+ = 0x20000000, 
+	gLENGTH
+ = 0x01000
+
+	@
+1
+.
+0
+32
+2127
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\App.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\DAC.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Eeprom.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\FuncGen.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\HAL_ADC.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\HAL_i2c.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Keyboard.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\LCD.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\LPC11xx.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Led.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\POWER_~1.H
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\Port_HAL.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\RTC.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\SYSTEM~1.H
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\System.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Inc\defs.h
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\App.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\DAC.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\Eeprom.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\FuncGen.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\HAL_ADC.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\HAL_i2c.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\Keyboard.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\LCD.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\Led.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\RTC.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\STARTU~1.S
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\SYSTEM~1.C
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\System.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\Src\main.c
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\gcc_arm.ld
+C:\Users\LuigiVM\Desktop\PBL\PROJET~1\branch\BRANCH~1\readme.txt
