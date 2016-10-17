@@ -29,6 +29,8 @@ static ProcessReturn Alarm_Process(void){
         case alsINIT:
         {
             UI_Init();
+            RTC_Init();
+            DiffAmp_Init();
 
             local.state = alsIDLE;
             break;
