@@ -53,18 +53,17 @@ typedef struct{
 }mdlTime;
 
 typedef struct{
-    unsigned char year;
-    unsigned char month;
     unsigned char day;
+    unsigned char month;
+    unsigned char year;
 }mdlDate;
 
 void Model_Init(void);
 
-void* Model_GetVar(ModelData md);
-
-void Model_SetVar(ModelData md, void *data, unsigned char size);
-
+// Variables operations
 bool Model_SetValue(ModelData md, void* value);
+
+void Model_GetValue(ModelData md, void* value);
 
 char *Model_GetMessage(ModelMsg mm, mdlLanguage lang);
 
@@ -72,6 +71,7 @@ char *Model_GetConfigOptText(ModelConfigOptTxt cot, mdlLanguage lang);
 
 char *Model_GetSplash(void);
 
+// Menu operations
 void Model_MenuNext(void);
 
 void Model_MenuPrev(void);

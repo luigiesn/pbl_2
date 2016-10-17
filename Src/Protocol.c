@@ -17,7 +17,7 @@ const char cmdMonth[] = {SCMD_MONTH};
 const char cmdYear[] = {SCMD_YEAR};
 
 
-char *cmds[] = {
+const char *cmds[] = {
     "00",
 
     cmdUp,

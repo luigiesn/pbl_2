@@ -25,84 +25,96 @@ void View_Render(View v){
         {
             View_PrintTab(Model_GetSplash(), tabCENTER, 1);
 
-            mdlLanguage *tempLang = Model_GetVar(mddLanguage);
-            mdlDayPeriod *tempDp = Model_GetVar(mddDayPeriod);
-            ModelMsg msg;
-            msg = *tempDp + 1;
+            mdlLanguage tempLang;
+            mdlDayPeriod tempDp;
 
-            View_PrintTab(Model_GetMessage(msg, *tempLang), tabCENTER, 2);
+            Model_GetValue(mddLanguage, (void*)&tempLang);
+            Model_GetValue(mddDayPeriod, (void*)&tempDp);
+
+            ModelMsg msg;
+            msg = tempDp + 1;
+
+            View_PrintTab(Model_GetMessage(msg, tempLang), tabCENTER, 2);
 
             break;
         }
         case viwMAIN:
         {
-            mdlTime *tempTime = Model_GetVar(mddTime);
-            mdlTemp *tempTemp1 = Model_GetVar(mddTemp1);
-            mdlTemp *tempTemp2 = Model_GetVar(mddTemp2);
+            mdlTime tempTime;
+            mdlTemp tempTemp1, tempTemp2;
 
-            unsigned char time[6]=  {(unsigned char)(tempTime->hour/10) + '0', (unsigned char)(tempTime->hour%10) + '0', ':',(unsigned char)(tempTime->min/10) + '0',(unsigned char)(tempTime->min%10) + '0','\0'};
+            Model_GetValue(mddTime, (void*)&tempTime);
+            Model_GetValue(mddTemp1, (void*)&tempTemp1);
+            Model_GetValue(mddTemp2, (void*)&tempTemp2);
+
+            unsigned char time[6]=  {(unsigned char)(tempTime.hour/10) + '0', (unsigned char)(tempTime.hour%10) + '0', ':',(unsigned char)(tempTime.min/10) + '0',(unsigned char)(tempTime.min%10) + '0','\0'};
 
             LCD_WriteString("T1:");
-            View_WriteDecimal((float)(tempTemp1->temp));
+            View_WriteDecimal((tempTemp1.temp)/10.0);
 
             View_PrintTab(time, tabRIGHT, 1);
 
             LCD_WriteCommand(lcdROW2);
 
             LCD_WriteString("T2:");
-            View_WriteDecimal(tempTemp2->temp);
+            View_WriteDecimal(tempTemp2.temp/10.0);
 
             break;
         }
         case viwCONFIG_HOME:
         {
-            unsigned char *opt, *optTxt, optDetail[VIEW_COLUMS+1];
-            opt = Model_GetVar(mddConfigOptTxt);
+            unsigned char opt, *optTxt, optDetail[VIEW_COLUMS+1];
+            mdlLanguage tempLang;
 
-            mdlLanguage *tempLang = Model_GetVar(mddLanguage);
-            optTxt = Model_GetConfigOptText(*opt, *tempLang);
+            Model_GetValue(mddConfigOptTxt, (void*)&opt);
+            Model_GetValue(mddLanguage, (void*)&tempLang);
+
+            optTxt = Model_GetConfigOptText(opt, tempLang);
 
             unsigned char i;
             for(i = 0; i < VIEW_COLUMS ; i++)
                 optDetail[i] = ' ';
 
-            switch (*opt){
+            switch (opt){
 
                 case cotCONF_DATE:
                 {
-                    mdlDate *tempDate = (mdlDate*)Model_GetVar(mddDate);
+                    mdlDate tempDate;
+                    Model_GetValue(mddDate, (void*)&tempDate);
 
-                    optDetail[0] = tempDate->day/10 + '0';
-                    optDetail[1] = tempDate->day%10 + '0';
+                    optDetail[0] = tempDate.day/10 + '0';
+                    optDetail[1] = tempDate.day%10 + '0';
                     optDetail[2] = '-';
-                    optDetail[3] = tempDate->month/10 + '0';
-                    optDetail[4] = tempDate->month%10 + '0';
+                    optDetail[3] = tempDate.month/10 + '0';
+                    optDetail[4] = tempDate.month%10 + '0';
                     optDetail[5] = '-';
-                    optDetail[6] = tempDate->year/10 + '0';
-                    optDetail[7] = tempDate->year%10 + '0';
+                    optDetail[6] = tempDate.year/10 + '0';
+                    optDetail[7] = tempDate.year%10 + '0';
                     optDetail[8] = '\0';
                     break;
                 }
                 case cotCONF_TIME:
                 {
-                    mdlTime *tempTime = (mdlTime*)(Model_GetVar(mddTime));
+                    mdlTime tempTime;
+                    Model_GetValue(mddTime, (void*)&tempTime);
 
-                    optDetail[0] = tempTime->hour/10 + '0';
-                    optDetail[1] = tempTime->hour%10 + '0';
+                    optDetail[0] = tempTime.hour/10 + '0';
+                    optDetail[1] = tempTime.hour%10 + '0';
                     optDetail[2] = ':';
-                    optDetail[3] = tempTime->min/10 + '0';
-                    optDetail[4] = tempTime->min%10 + '0';
+                    optDetail[3] = tempTime.min/10 + '0';
+                    optDetail[4] = tempTime.min%10 + '0';
 
                     optDetail[5] = '\0';
                     break;
                 }
                 case cotCONF_TEMP1:
                 {
-                    mdlTempLimits *tempTempLimits1 = (mdlTempLimits*)(Model_GetVar(mddTempLimits1));
+                    mdlTempLimits tempTempLimits1;
+                    Model_GetValue(mddTempLimits1, (void*)&tempTempLimits1);
                     unsigned int temp1;
 
                     // min temp
-                    temp1 = tempTempLimits1->tempMin;
+                    temp1 = tempTempLimits1.tempMin;
                     optDetail[0] = ((temp1/100)%10 + '0');
                     optDetail[1] = ((temp1/10)%10 + '0');
                     optDetail[2] = ('.');
@@ -113,7 +125,7 @@ void View_Render(View v){
                     optDetail[6] = ' ';
 
                     // max temp
-                    temp1 = tempTempLimits1->tempMax;
+                    temp1 = tempTempLimits1.tempMax;
                     optDetail[7] = ((temp1/100)%10 + '0');
                     optDetail[8] = ((temp1/10)%10 + '0');
                     optDetail[9] = ('.');
@@ -125,11 +137,12 @@ void View_Render(View v){
                 }
                 case cotCONF_TEMP2:
                 {
-                    mdlTempLimits *tempTempLimits2 = (mdlTempLimits*)(Model_GetVar(mddTempLimits2));
+                    mdlTempLimits tempTempLimits2;
+                    Model_GetValue(mddTempLimits2, (void*)&tempTempLimits2);
                     unsigned int temp2;
 
                     // min temp
-                    temp2 = tempTempLimits2->tempMin;
+                    temp2 = tempTempLimits2.tempMin;
                     optDetail[0] = ((temp2/100)%10 + '0');
                     optDetail[1] = ((temp2/10)%10 + '0');
                     optDetail[2] = ('.');
@@ -140,7 +153,7 @@ void View_Render(View v){
                     optDetail[6] = ' ';
 
                     // max temp
-                    temp2 = tempTempLimits2->tempMax;
+                    temp2 = tempTempLimits2.tempMax;
                     optDetail[7] = ((temp2/100)%10 + '0');
                     optDetail[8] = ((temp2/10)%10 + '0');
                     optDetail[9] = ('.');

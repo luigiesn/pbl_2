@@ -29,15 +29,6 @@ typedef enum{
     sscTEMP1, sscTEMP2, sscTIME, sscDATE, sscNONE
 }SubScreen;
 
-mdlLanguage tempLan = DEFAULT_LANGUAGE;
-mdlDayPeriod tempDp = mdpAFTERNOON;
-mdlTemp tempT1 = {0};
-mdlTemp tempT2 = {0};
-mdlTime tempTime = {0,0};
-mdlDate tempData = {1,4,7};
-mdlTempLimits temp1Limits = {0 , 0};
-mdlTempLimits temp2Limits = {0 , 0};
-
 static struct{
     UiState state;
 
@@ -52,6 +43,7 @@ static struct{
 static ProcessReturn UI_Process(void);
 static ProcessReturn UI_ScreenProcess(void);
 static ProcessReturn UI_BacklightProcess(void);
+static ProcessReturn UI_VarsCheckProcess(void);
 
 ProcessReturn UI_Config_Home(void);
 ProcessReturn UI_Config_Time(void);
@@ -64,14 +56,16 @@ ProcessReturn UI_Main(void);
 void UI_Init(void){
     local.state = uisINIT;
 
-    static Process ui, scr, backlight;
+    static Process ui, scr, backlight, varCheck;
     ui.pR = UI_Process;
     scr.pR = UI_ScreenProcess;
     backlight.pR = UI_BacklightProcess;
+    varCheck.pR = UI_VarsCheckProcess;
 
     ProcMan_AddProcess(&ui);
     ProcMan_AddProcess(&scr);
     ProcMan_AddProcess(&backlight);
+    ProcMan_AddProcess(&varCheck);
 }
 
 static ProcessReturn UI_Process(void){
@@ -85,14 +79,23 @@ static ProcessReturn UI_Process(void){
 
             View_Render(viwBLANK);
 
-            Model_SetVar(mddLanguage, &tempLan, sizeof(mdlLanguage));
-            Model_SetVar(mddDayPeriod, &tempDp, sizeof(mdlDayPeriod));
-            Model_SetVar(mddTemp1, &tempT1, sizeof(mdlTemp));
-            Model_SetVar(mddTemp2, &tempT2, sizeof(mdlTemp));
-            Model_SetVar(mddTime, &tempTime, sizeof(mdlTime));
-            Model_SetVar(mddDate, &tempData, sizeof(mdlDate));
-            Model_SetVar(mddTempLimits1, &temp1Limits, sizeof(mdlTempLimits));
-            Model_SetVar(mddTempLimits2, &temp2Limits, sizeof(mdlTempLimits));
+            mdlLanguage tempLan = DEFAULT_LANGUAGE;
+            mdlDayPeriod tempDp = mdpAFTERNOON;
+            mdlTemp tempT1 = {0};
+            mdlTemp tempT2 = {0};
+ //           mdlTime tempTime = {12,13};
+            mdlDate tempData = {1,4,7};
+            mdlTempLimits temp1Limits = {220 , 510};
+            mdlTempLimits temp2Limits = {210 , 500};
+
+            Model_SetValue(mddLanguage, (void*)&tempLan);
+            Model_SetValue(mddDayPeriod, (void*)&tempDp);
+            Model_SetValue(mddTemp1, (void*)&tempT1);
+            Model_SetValue(mddTemp2, (void*)&tempT2);
+//            Model_SetValue(mddTime, (void*)&tempTime);
+            Model_SetValue(mddDate, (void*)&tempData);
+            Model_SetValue(mddTempLimits1, (void*)&temp1Limits);
+            Model_SetValue(mddTempLimits2, (void*)&temp2Limits);
 
             local.calls = 0;
 
@@ -134,6 +137,32 @@ static ProcessReturn UI_BacklightProcess(void){
             LCD_BackLight(false);
         }
     }
+
+    return prcREPEAT;
+}
+
+static ProcessReturn UI_VarsCheckProcess(void){
+    static unsigned int cnt = 0;
+
+    cnt++;
+    if(cnt != 2500)
+        return prcREPEAT;
+
+    cnt = 0;
+
+    mdlTemp tempT;
+
+    tempT.temp = DiffAmp_GetSample(AMP_A_CH);
+    Model_SetValue(mddTemp1, (void*)&tempT);
+
+    tempT.temp = DiffAmp_GetSample(AMP_B_CH);
+    Model_SetValue(mddTemp2, (void*)&tempT);
+
+    mdlTime time;
+    time.hour = RTC_ReadParam(rtcHOUR);
+    time.min = RTC_ReadParam(rtcMINUTE);
+
+    Model_SetValue(mddTime, (void*)&time);
 
     return prcREPEAT;
 }
@@ -214,33 +243,42 @@ static ProcessReturn UI_ScreenProcess(void){
         {
             static unsigned char fieldSel = 0;
 
-            mdlTime time = *((mdlTime*)(Model_GetVar(mddTime)));
+            mdlTime time;
+            //Model_GetValue(mddTime, (void*)&time);
+
+            time.hour = RTC_ReadParam(rtcHOUR);
+            time.min = RTC_ReadParam(rtcMINUTE);
 
             if(fieldSel == 0){
+
                 if(KBD_GetEvent(LEFT_BUTTON) == LEFT_EVENT){
                     time.hour--;
                 }
                 else if(KBD_GetEvent(RIGHT_BUTTON) == RIGHT_EVENT){
                     time.hour++;
                 }
-                else if(KBD_GetEvent(DOWN_BUTTON) == DOWN_EVENT){
-                    fieldSel = 1;
-                }
+
             }
             else if(fieldSel == 1){
+
                 if(KBD_GetEvent(LEFT_BUTTON) == LEFT_EVENT){
                     time.min--;
                 }
                 else if(KBD_GetEvent(RIGHT_BUTTON) == RIGHT_EVENT){
                     time.min++;
-                }
-                else if(KBD_GetEvent(DOWN_BUTTON) == DOWN_EVENT){
-                    fieldSel = 0;
+
                 }
 
-            Model_SetValue(mddTime, (void*)&time);
-            time = *((mdlTime*)(Model_GetVar(mddTime)));
             }
+
+            if(KBD_GetEvent(DOWN_BUTTON) == DOWN_EVENT){
+                fieldSel++;
+                if(fieldSel == 2)
+                    fieldSel = 0;
+            }
+
+            RTC_SetParam(rtcHOUR, time.hour);
+            RTC_SetParam(rtcMINUTE, time.min);
 
             break;
         }
@@ -248,7 +286,8 @@ static ProcessReturn UI_ScreenProcess(void){
         {
             static unsigned char fieldSel = 0;
 
-            mdlTempLimits t1Limits = *((mdlTempLimits*)(Model_GetVar(mddTempLimits1)));
+            mdlTempLimits t1Limits;
+            Model_GetValue(mddTempLimits1, (void*)&t1Limits);
 
             if(fieldSel == 0){
                 if(KBD_GetEvent(LEFT_BUTTON) == LEFT_EVENT){
@@ -274,7 +313,6 @@ static ProcessReturn UI_ScreenProcess(void){
             }
 
             Model_SetValue(mddTempLimits1, (void*)&t1Limits);
-            t1Limits = *((mdlTempLimits*)(Model_GetVar(mddTempLimits1)));
 
             break;
         }
@@ -282,7 +320,8 @@ static ProcessReturn UI_ScreenProcess(void){
         {
             static unsigned char fieldSel = 0;
 
-            mdlTempLimits t2Limits = *((mdlTempLimits*)(Model_GetVar(mddTempLimits2)));
+            mdlTempLimits t2Limits;
+            Model_GetValue(mddTempLimits2, (void*)&t2Limits);
 
             if(fieldSel == 0){
                 if(KBD_GetEvent(LEFT_BUTTON) == LEFT_EVENT){
@@ -308,7 +347,6 @@ static ProcessReturn UI_ScreenProcess(void){
             }
 
             Model_SetValue(mddTempLimits2, (void*)&t2Limits);
-            t2Limits = *((mdlTempLimits*)(Model_GetVar(mddTempLimits2)));
 
             break;
         }
@@ -316,7 +354,9 @@ static ProcessReturn UI_ScreenProcess(void){
         {
             static unsigned char fieldSel = 0;
 
-            mdlDate date = *((mdlDate*)(Model_GetVar(mddDate)));
+            mdlDate date;
+            Model_GetValue(mddDate, (void*)&date);
+
 
             if(fieldSel == 0){
                 if(KBD_GetEvent(LEFT_BUTTON) == LEFT_EVENT)
@@ -347,7 +387,6 @@ static ProcessReturn UI_ScreenProcess(void){
             }
 
             Model_SetValue(mddDate, (void*)&date);
-            date = *((mdlDate*)(Model_GetVar(mddDate)));
 
             break;
         }

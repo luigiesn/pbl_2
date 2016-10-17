@@ -40,57 +40,81 @@ ProcessReturn SerialCmd_Process(void){
                     switch(pp.prt){
                         case prtMIN:
                         {
-                            mdlTime *time = (mdlTime*)(Model_GetVar(mddTime));
-                            time->min = pp.value;
+                            mdlTime time;
+
+                            Model_GetValue(mddTime, (void*)&time );
+                            time.min = pp.value;
+                            Model_SetValue(mddTime, (void*)&time );
                             break;
                         }
                         case prtHOUR:
                         {
-                            mdlTime *time = (mdlTime*)(Model_GetVar(mddTime));
-                            time->hour = pp.value;
+                            mdlTime time;
+
+                            Model_GetValue(mddTime, (void*)&time );
+                            time.hour = pp.value;
+                            Model_SetValue(mddTime, (void*)&time );
                             break;
                         }
                         case prtDAY:
                         {
-                            mdlDate *date = (mdlDate*)(Model_GetVar(mddDate));
-                            date->day = pp.value;
-                            break;
+                            mdlDate date;
+
+                            Model_GetValue(mddDate, (void*)&date );
+                            date.day = pp.value;
+                            Model_SetValue(mddDate, (void*)&date );
                         }
                         case prtMONTH:
                         {
-                            mdlDate *date = (mdlDate*)(Model_GetVar(mddDate));
-                            date->month = pp.value;
-                            break;
+                            mdlDate date;
+
+                            Model_GetValue(mddDate, (void*)&date );
+                            date.month = pp.value;
+                            Model_SetValue(mddDate, (void*)&date );
                         }
                         case prtTEMP1MAX:
                         {
-                            mdlTempLimits *temp = (mdlTempLimits*)(Model_GetVar(mddTempLimits1));
-                            temp->tempMax = pp.value;
+                            mdlTempLimits temp;
+
+                            Model_GetValue(mddTempLimits1, (void*)&temp );
+                            temp.tempMax = pp.value;
+                            Model_SetValue(mddTempLimits1, (void*)&temp );
                             break;
                         }
                         case prtTEMP1MIN:
                         {
-                            mdlTempLimits *temp = (mdlTempLimits*)(Model_GetVar(mddTempLimits1));
-                            temp->tempMin = pp.value;
+                            mdlTempLimits temp;
+
+                            Model_GetValue(mddTempLimits1, (void*)&temp );
+                            temp.tempMin = pp.value;
+                            Model_SetValue(mddTempLimits1, (void*)&temp );
                             break;
                         }
                         case prtTEMP2MAX:
                         {
-                            mdlTempLimits *temp = (mdlTempLimits*)(Model_GetVar(mddTempLimits2));
-                            temp->tempMax = pp.value;
+                            mdlTempLimits temp;
+
+                            Model_GetValue(mddTempLimits2, (void*)&temp );
+                            temp.tempMax = pp.value;
+                            Model_SetValue(mddTempLimits2, (void*)&temp );
                             break;
                         }
                         case prtTEMP2MIN:
                         {
-                            mdlTempLimits *temp = (mdlTempLimits*)(Model_GetVar(mddTempLimits2));
-                            temp->tempMin = pp.value;
+                            mdlTempLimits temp;
+
+                            Model_GetValue(mddTempLimits2, (void*)&temp );
+                            temp.tempMin = pp.value;
+                            Model_SetValue(mddTempLimits2, (void*)&temp );
                             break;
                         }
                         case prtYEAR:
                         {
-                            mdlDate *date = (mdlDate*)(Model_GetVar(mddDate));
-                            date->year = pp.value;
-                            break;
+                            mdlDate date;
+
+                            Model_GetValue(mddDate, (void*)&date );
+                            date.year = pp.value;
+                            Model_SetValue(mddDate, (void*)&date );
                         }
 
                     }

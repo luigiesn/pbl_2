@@ -1,7 +1,6 @@
 #include "Keyboard.h"
 
 #include "HAL_ADC.h"
-#include "LCD.h"
 
 #define VREF 3.3
 

@@ -10,6 +10,7 @@
 
 #include "Keyboard.h"
 #include "RTC.h"
+#include "DiffAmp.h"
 
 void UI_Init(void);
 

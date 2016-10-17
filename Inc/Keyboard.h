@@ -17,4 +17,6 @@ void KBD_Boot(void);
 
 keyState KBD_GetEvent(key k);
 
+bool KBD_Changed(void);
+
 #endif

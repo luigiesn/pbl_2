@@ -80,29 +80,6 @@ void Model_Init(void){
     subScreenSelected = false;
 }
 
-void* Model_GetVar(ModelData md){
-    if(md < mddEnd){
-       return data[md];
-    }
-    return NULL;
-}
-
-void Model_SetVar(ModelData md, void *_data, unsigned char size){
-    if(md < mddEnd){
-
-        char *tmpDataDest;
-        char *tmpDataSrc;
-
-        tmpDataDest = (char*)data[md];
-        tmpDataSrc = (char*)_data;
-
-        unsigned char i;
-        for(i = 0 ; i < size ; i++, tmpDataDest++, tmpDataSrc++){
-            *tmpDataDest = *tmpDataSrc;
-        }
-    }
-}
-
 bool Model_SetValue(ModelData md, void *value){
     switch(md){
         case mddDate:
@@ -180,6 +157,55 @@ bool Model_SetValue(ModelData md, void *value){
     return false;
 }
 
+void Model_GetValue(ModelData md, void* value){
+    switch (md) {
+        case mddConfigOptTxt:
+        {
+            *((unsigned char*)value) = *((unsigned char*)data[mddConfigOptTxt]);
+            break;
+        }
+        case mddDate:
+        {
+            *((mdlDate*)value) = *((mdlDate*)data[mddDate]);
+            break;
+        }
+        case mddDayPeriod:
+        {
+            *((mdlDayPeriod*)value) = *((mdlDayPeriod*)data[mddDayPeriod]);
+            break;
+        }
+        case mddLanguage:
+        {
+            *((mdlLanguage*)value) = *((mdlLanguage*)data[mddLanguage]);
+            break;
+        }
+        case mddTemp1:
+        {
+            *((mdlTemp*)value) = *((mdlTemp*)data[mddTemp1]);
+            break;
+        }
+        case mddTemp2:
+        {
+            *((mdlTemp*)value) = *((mdlTemp*)data[mddTemp2]);
+            break;
+        }
+        case mddTempLimits1:
+        {
+            *((mdlTempLimits*)value) = *((mdlTempLimits*)data[mddTempLimits1]);
+            break;
+        }
+        case mddTempLimits2:
+        {
+            *((mdlTempLimits*)value) = *((mdlTempLimits*)data[mddTempLimits2]);
+            break;
+        }
+        case mddTime:
+        {
+            *((mdlTime*)value) = *((mdlTime*)data[mddTime]);
+            break;
+        }
+    }
+}
 
 char *Model_GetMessage(ModelMsg mm, mdlLanguage lang){
     return STRING(msgTranslation, lang, (unsigned char)mm);
