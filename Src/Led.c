@@ -1,9 +1,5 @@
 #include "Led.h"
 
-#include <LPC11xx.h>
-
-#include "Port_HAL.h"
-
 void Led_Boot(void){
     Port_HAL_PinDir(2, (unsigned char)ledA, OUTPUT);
 	Port_HAL_PinDir(2, (unsigned char)ledB, OUTPUT);

@@ -1,6 +1,9 @@
 #ifndef DEFS_H
 #define	DEFS_H
 
+/**
+ * @typedef Boolean type
+ */
 typedef enum{
     false, true
 }bool_type;

@@ -1,12 +1,7 @@
 #include "DiffAmp.h"
 
-
-void DiffAmp_Init(void){
-
-}
-
 unsigned int DiffAmp_GetSample(unsigned char ch){
     HAL_ADC_SetChannel(ch);
 
-    return (unsigned int)((float)HAL_ADC_GetSample()*330/1024);
+    return (unsigned int)((float)HAL_ADC_GetSample()*DIFFAMP_MAX_VALUE/DIFFAMP_ADC_DISCRETIZATION_STEPS);
 }

@@ -1,7 +1,5 @@
 #include "Keyboard.h"
 
-#include "HAL_ADC.h"
-
 #define VREF 3.3
 
 #define R1 2000

@@ -10,10 +10,9 @@
 
 #include "Model.h"
 
-
-
-#include "LCD.h"
-
+/**
+ * @brief Initializes the serial commands routines
+ */
 void SerialCmd_Boot(void);
 
 #endif

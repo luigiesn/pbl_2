@@ -1,6 +1,4 @@
 #include "LCD.h"
-#include "System.h"
-#include "Led.h"
 
 void LCD_Strobe(void);
 void LCD_WriteByte(unsigned char valor, unsigned char data);

@@ -1,12 +1,5 @@
 #include "DAC.h"
 
-#include "HAL_i2c.h"
-
-void DAC_Init(void){
-
-
-}
-
 void DAC_SetVoltage(unsigned int v){
 
     unsigned int convValue = (unsigned int)(((float)v*4096)/(DAC_VREF*1000));

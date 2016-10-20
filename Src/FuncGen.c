@@ -1,9 +1,5 @@
 #include "FuncGen.h"
 
-#include <LPC11xx.h>
-
-#include "math.h"
-
 unsigned int samples[32] = { 2048,2447,2831,3185,
 							3495,3750,3939,4056,
 							4095,4056,3939,3750,

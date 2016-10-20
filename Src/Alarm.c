@@ -30,7 +30,6 @@ static ProcessReturn Alarm_Process(void){
         {
             UI_Init();
             RTC_Init();
-            DiffAmp_Init();
 
             local.state = alsIDLE;
             break;

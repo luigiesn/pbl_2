@@ -1,9 +1,5 @@
 #include "HAL_ADC.h"
 
-#include <LPC11xx.h>
-
-#include "System.h"
-
 static struct{
     unsigned char oldCh;
 }Prv;
@@ -12,7 +8,7 @@ void HAL_ADC_Boot(void){
     LPC_SYSCON->SYSAHBCLKCTRL |= (1<<13);
     LPC_SYSCON->PDRUNCFG &= ~(1<<4);
 
-    LPC_ADC->CR = 0xb00;
+    LPC_ADC->CR = 0x00;
 
     LPC_IOCON->PIO1_11 = 0x01;
     LPC_IOCON->R_PIO0_11 = 0x02;

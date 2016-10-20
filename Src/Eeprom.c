@@ -2,10 +2,6 @@
 
 #include "HAL_i2c.h"
 
-void Eeprom_Init(void){
-
-}
-
 void Eeprom_Write(unsigned int addr, unsigned char data){
     unsigned char temp[3];
 

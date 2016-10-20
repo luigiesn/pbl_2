@@ -37,6 +37,9 @@
 #define SCMD_MONTH   "MT"
 #define SCMD_YEAR    "YR"
 
+/**
+ * Parameter type
+ */
 typedef enum{
      prtNULL,
 
@@ -59,11 +62,20 @@ typedef enum{
      prtEND
 }ParamType;
 
+/**
+ * A protocol package
+ */
 typedef struct{
-    ParamType prt;
-    unsigned int value;
+    ParamType prt;/**< Parameter type indentifier */
+    unsigned int value; /**< Parameter type indentifier */
 }ProtocolPacket;
 
+/**
+ * @brief Parses a valid protocol excerpt.
+ *
+ * @param pkt A empty packet to be filled.
+ * @param sentence A protocol excerpt to be analyzed.
+ */
 void Protocol_Parse(ProtocolPacket *pkt, unsigned char *sentence);
 
 #endif

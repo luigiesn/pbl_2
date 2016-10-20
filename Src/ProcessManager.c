@@ -1,7 +1,5 @@
 #include "ProcessManager.h"
 
-#include "BootConfig.h"
-
 static struct {
     UINT8 head;
     UINT8 tail;

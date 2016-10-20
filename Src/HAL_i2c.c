@@ -1,9 +1,5 @@
 #include "HAL_i2c.h"
 
-#include "LCD.h"
-
-#include "System.h"
-
 void HAL_i2c_Init(void){
     LPC_SYSCON->SYSAHBCLKCTRL |= 0x20;
     LPC_SYSCON->SYSAHBCLKCTRL |= (1<<16);	// habilitar o clock para o bloco IOCON (UM10398, 3.5.14)

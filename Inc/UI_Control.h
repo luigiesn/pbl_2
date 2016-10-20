@@ -12,6 +12,12 @@
 #include "RTC.h"
 #include "DiffAmp.h"
 
+/**
+ * @brief Intializes the user interface
+ *
+ * It manages all functions from interface
+ * like buttons and display.
+ */
 void UI_Init(void);
 
 #endif

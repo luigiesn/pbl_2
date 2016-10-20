@@ -5,6 +5,12 @@
 #include "DiffAmp.h"
 #include "RTC.h"
 
+/**
+ * @brief Main application boot routine
+ *
+ * This routine enables and manages all
+ * alarm application functionalities
+ */
 void Alarm_Boot(void);
 
 #endif
