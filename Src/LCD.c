@@ -8,8 +8,10 @@ void LCD_Boot(void){
     Port_HAL_PinDir(3, 1, OUTPUT);
     Port_HAL_SetOutput(3, 1, 0);
 
+    // display stabilization time
     DelayMs(15);
 
+    // configure Pin as I/O
     LPC_IOCON->PIO3_5 = 0;
     LPC_IOCON->PIO1_8 = 0;
     LPC_IOCON->PIO0_2 = 0;
@@ -21,6 +23,7 @@ void LCD_Boot(void){
     LPC_IOCON->PIO2_4 = 0;
     LPC_IOCON->PIO2_5 = 0;
 
+    // configure I/O
     Port_HAL_PinDir(3, 5, OUTPUT);
 	Port_HAL_PinDir(1, 8, OUTPUT);
 	Port_HAL_PinDir(0, 2, OUTPUT);
@@ -32,6 +35,7 @@ void LCD_Boot(void){
 	Port_HAL_PinDir(2, 4, OUTPUT);
     Port_HAL_PinDir(2, 5, OUTPUT);
 
+    // lcd commands to configure the 8-bit bus
 	DelayMs(16);
 
 	LCD_WriteByte(0x30, 0);
@@ -63,7 +67,7 @@ void LCD_WriteCommand(lcdCmd cmd){
     LCD_WriteByte((unsigned char)cmd, 0);
 
     if(cmd == lcdCLEAR || cmd == lcdCURSOR_HOME){
-            DelayUs(1640);
+        DelayUs(1640);
     }
 }
 
@@ -75,7 +79,7 @@ void LCD_WriteData(unsigned char data){
 void LCD_WriteString(char *str){
 	while(*str){
         LCD_WriteByte(*str++, 1);
-        }
+    }
 }
 
 void LCD_Strobe(void){
@@ -89,6 +93,7 @@ void LCD_WriteByte(unsigned char valor, unsigned char data){
 
 	Port_HAL_SetOutput(3, 5, data);
 
+    // write data in LCD bus
 	Port_HAL_SetOutput(1, 8 ,(valor & 0x80) >> 7); //7
 	Port_HAL_SetOutput(0, 2 ,(valor & 0x40) >> 6); //6
 	Port_HAL_SetOutput(2, 7 ,(valor & 0x20) >> 5); //5

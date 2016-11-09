@@ -47,6 +47,7 @@ void View_Render(View v){
             Model_GetValue(mddTemp1, (void*)&tempTemp1);
             Model_GetValue(mddTemp2, (void*)&tempTemp2);
 
+            // parse from integer to character
             unsigned char time[6]=  {(unsigned char)(tempTime.hour/10) + '0', (unsigned char)(tempTime.hour%10) + '0', ':',(unsigned char)(tempTime.min/10) + '0',(unsigned char)(tempTime.min%10) + '0','\0'};
 
             LCD_WriteString("T1:");
@@ -82,6 +83,7 @@ void View_Render(View v){
                     mdlDate tempDate;
                     Model_GetValue(mddDate, (void*)&tempDate);
 
+                    // parse from integer to character
                     optDetail[0] = tempDate.day/10 + '0';
                     optDetail[1] = tempDate.day%10 + '0';
                     optDetail[2] = '-';
@@ -98,13 +100,17 @@ void View_Render(View v){
                     mdlTime tempTime;
                     Model_GetValue(mddTime, (void*)&tempTime);
 
+                    // parse from integer to character
                     optDetail[0] = tempTime.hour/10 + '0';
                     optDetail[1] = tempTime.hour%10 + '0';
                     optDetail[2] = ':';
                     optDetail[3] = tempTime.min/10 + '0';
                     optDetail[4] = tempTime.min%10 + '0';
+                    optDetail[5] = ':';
+                    optDetail[6] = tempTime.sec/10 + '0';
+                    optDetail[7] = tempTime.sec%10 + '0';
 
-                    optDetail[5] = '\0';
+                    optDetail[8] = '\0';
                     break;
                 }
                 case cotCONF_TEMP1:
@@ -113,6 +119,7 @@ void View_Render(View v){
                     Model_GetValue(mddTempLimits1, (void*)&tempTempLimits1);
                     unsigned int temp1;
 
+                    // parse from integer to character
                     // min temp
                     temp1 = tempTempLimits1.tempMin;
                     optDetail[0] = ((temp1/100)%10 + '0');
@@ -141,6 +148,7 @@ void View_Render(View v){
                     Model_GetValue(mddTempLimits2, (void*)&tempTempLimits2);
                     unsigned int temp2;
 
+                    // parse from integer to character
                     // min temp
                     temp2 = tempTempLimits2.tempMin;
                     optDetail[0] = ((temp2/100)%10 + '0');
@@ -216,7 +224,7 @@ static void View_WriteDecimal(float f){
 static unsigned char View_PrintTab(unsigned char* str, TabType t, unsigned char row){
     unsigned char c, offset;
 
-    for(c = 0; str[c] != '\0'; c++);
+    for(c = 0; str[c] != '\0'; c++); // count elements number in str
 
     if(c > VIEW_COLUMS)
         return 0;
@@ -224,7 +232,7 @@ static unsigned char View_PrintTab(unsigned char* str, TabType t, unsigned char 
     if(t == tabLEFT){
         offset = 0;
     }
-    else if(t == tabCENTER){
+    else if(t == tabCENTER){ // calculate text start position base on number of chars in str
         offset = (unsigned char)((VIEW_COLUMS - c)/2);
     }
     else if(t == tabRIGHT){
@@ -233,8 +241,9 @@ static unsigned char View_PrintTab(unsigned char* str, TabType t, unsigned char 
     else
         return 0;
 
+    // set starting cursor position
     LCD_WriteCommand((lcdCmd)(lcdSETTOXX | ((row - 0x01u) << 6) | offset));
-
+    // write str
     LCD_WriteString((char*)str);
 
     return 1;

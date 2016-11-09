@@ -1,5 +1,7 @@
 #include "System.h"
 
+// all time constants are defined empirically
+
 inline void DelayCycl(unsigned int c){
     unsigned int c_count;
 

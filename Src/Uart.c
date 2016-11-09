@@ -14,16 +14,20 @@ unsigned char rxTailPtr;
 ProcessReturn Uart_Process(void);
 
 void Uart_Boot(void){
+    // initializes input and output ring-buffers
     txTailPtr = 0;
     txHeadPtr = 0;
     rxTailPtr = 0;
     rxHeadPtr = 0;
 
+    // configure UART i/o
     LPC_IOCON->PIO1_7 = 1;
     LPC_IOCON->PIO1_6 = 1;
 
+    // configure UART clock
     LPC_SYSCON->SYSAHBCLKCTRL |= 1 << 12;
 
+    // configure UART
     LPC_SYSCON->UARTCLKDIV    |= 0x01;
 	LPC_UART->LCR             |= (1<<7);
 	LPC_UART->DLM              = 0x0;
@@ -40,6 +44,7 @@ void Uart_Boot(void){
 
 ProcessReturn Uart_Process(void){
 
+    // if output sw buffer is not empty, send data
     if(LPC_UART->LSR & 0x40){
         if(txHeadPtr != txTailPtr){
             LPC_UART->THR = txBuffer[txTailPtr++];
@@ -48,7 +53,7 @@ ProcessReturn Uart_Process(void){
         }
     }
 
-    while (LPC_UART->LSR & 0x01){ // if has data
+    while (LPC_UART->LSR & 0x01){ // if has data in hw FIFO buffer
         rxBuffer[rxHeadPtr++] = LPC_UART->RBR;
         if(rxHeadPtr == RX_BUFFER_SZ)
             rxHeadPtr = 0;
@@ -64,7 +69,7 @@ bool Uart_DataAvailable(void){
 unsigned int Uart_Read(unsigned char* data, unsigned int size){
     unsigned int i;
 
-    for(i = 0 ; i < size && (rxHeadPtr != rxTailPtr) ; i++){ // copy data
+    for(i = 0 ; i < size && (rxHeadPtr != rxTailPtr) ; i++){ // copy data from internal FIFO buffer
         data[i] = rxBuffer[rxTailPtr++];
         if(rxTailPtr == RX_BUFFER_SZ){
             rxTailPtr = 0;

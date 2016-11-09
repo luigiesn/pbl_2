@@ -178,7 +178,7 @@ static ProcessReturn UI_ScreenProcess(void){
             local.view = UI_Splash;
 
             wait++;
-            if(wait == 20000)
+            if(wait == 500)
                 local.scr = scrMAIN;
 
             break;
@@ -188,7 +188,7 @@ static ProcessReturn UI_ScreenProcess(void){
             local.view = UI_Main;
 
             if(KBD_GetEvent(SELECT_BUTTON) == SELECT_EVENT){
-                    local.scr = scrCONFIG_HOME;
+                local.scr = scrCONFIG_HOME;
             }
             break;
         }

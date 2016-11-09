@@ -24,7 +24,7 @@ ProcessReturn SerialCmd_Process(void){
 
     if(workBuffer[0] != PROTOCOL_START_BYTE){
         workBuffer[0] = Uart_ReadByte();
-    }else{
+    }else{ // wait for start byte
         iWorkBuffer++;
         workBuffer[iWorkBuffer] = Uart_ReadByte();
 

@@ -43,12 +43,14 @@ static ProcessReturn KBD_Process(void){
     HAL_ADC_SetChannel(KBD_AD_CH);
 
     unsigned int temp;
-    temp = HAL_ADC_GetSample();
+    temp = HAL_ADC_GetSample(); // get keyboard current value
 
     unsigned char key;
     for(key = 0; key < KEY_NUMBR; key++){
-        keyNow[key] = UP;
+        keyNow[key] = UP; // reset all keys state
     }
+
+    // verify which key is pressed
 
     if(temp < TH1 + DEAD_ZONE){
         keyNow[0] = DOWN;
@@ -73,6 +75,7 @@ static ProcessReturn KBD_Process(void){
 
     unsigned char i;
     for(i = 0; i < KEY_NUMBR; i++){
+        // debounce all keys from keyboard
         KBD_Debounce(i);
     }
 
@@ -80,18 +83,22 @@ static ProcessReturn KBD_Process(void){
 }
 
 static void KBD_Debounce(key k){
-    static unsigned char keyLast[KEY_NUMBR];
-    static unsigned int keyBounceCnt[KEY_NUMBR] = {[0 ... KEY_NUMBR - 1] = 0};// bouncing count
+    static unsigned char keyLast[KEY_NUMBR]; // store key last state
+    static unsigned int keyBounceCnt[KEY_NUMBR] = {[0 ... KEY_NUMBR - 1] = 0}; // bouncing count
 
+    // if key seems stabilized
     if(keyNow[k] == keyLast[k]){
+        // wait for key stabilization until DEBOUNCE_TIME
         if(keyBounceCnt[k] <= DEBOUNCE_TIME)
             keyBounceCnt[k]++;
     }
     else{
+        // if key is bouncing
         keyBounceCnt[k] = 0;
         keyLast[k] = keyNow[k];
     }
 
+    // if the key stabilized
     if(keyBounceCnt[k] == DEBOUNCE_TIME){
 
         if(keyNow[k] == DOWN){
@@ -106,6 +113,7 @@ static void KBD_Debounce(key k){
 keyState KBD_GetEvent(key k){
     keyState temp = state[k];
 
+    // reset to prevent misreading
     state[k] = kysNULL;
 
     return temp;
@@ -114,6 +122,7 @@ keyState KBD_GetEvent(key k){
 bool KBD_Changed(void){
     bool temp = changed;
 
+    // reset to prevent misreading
     changed = false;
 
     return temp;

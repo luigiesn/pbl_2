@@ -9,6 +9,7 @@
 #include "Uart.h"
 #include "SerialCommand.h"
 
+// all boot routines
 static BootRoutine bR[] = {
     KBD_Boot,
     HAL_ADC_Boot,

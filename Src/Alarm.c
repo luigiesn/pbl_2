@@ -14,6 +14,7 @@ void Alarm_Boot(void){
 
     local.state = alsINIT;
 
+    // include process in queue
     static Process alarm;
     alarm.pR = Alarm_Process;
     ProcMan_AddProcess(&alarm);
