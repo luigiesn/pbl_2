@@ -64,6 +64,7 @@ typedef struct{
 typedef struct{
     unsigned char hour;
     unsigned char min;
+    unsigned char sec;
 }mdlTime;
 
 /** Date variable */
